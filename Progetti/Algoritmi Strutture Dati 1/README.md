@@ -7,3 +7,5 @@ Nella cartella sono presenti vari tipi di file:
 
 Nella cartella Progetto/Relazione è presente un file di testo che specifica le scelte progettuali attuate, le stime delle complessità e i grafici dove richiesti.
 
+
+Tutto il codice è sotto la [GNU General Public License](https://github.com/methk/University/blob/master/LICENSE)
