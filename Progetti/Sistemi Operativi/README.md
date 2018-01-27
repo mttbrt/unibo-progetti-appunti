@@ -8,4 +8,4 @@
 Si consulti il REPORT_LSO.pdf per tutti i dettagli.
 
 
-Tutto il codice è sotto la [GNU General Public License](https://github.com/methk/University/blob/master/LICENSE)
+Tutto il codice è sotto la [GNU General Public License](https://github.com/methk/University/blob/master/Progetti/Sistemi%20Operativi/LICENSE)

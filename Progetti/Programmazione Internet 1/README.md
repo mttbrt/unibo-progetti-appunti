@@ -7,4 +7,4 @@ Struttura:
 NOTA: i file sorgente strettamente necessari al progetto si trovano in "./Game/src/game". Il file da eseguire è Game.java
 
 
-Tutto il codice è sotto la [GNU General Public License](https://github.com/methk/University/blob/master/LICENSE)
+Tutto il codice è sotto la [GNU General Public License](https://github.com/methk/University/blob/master/Progetti/Programmazione%20Internet%201/LICENSE)
