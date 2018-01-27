@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="340.0" prefWidth="486.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.control.HomeController">
+   <stylesheets>
+      <URL value="@HomeTheme.css" />
+   </stylesheets>
+   <children>
+      <Pane fx:id="background" layoutX="-2.0" prefHeight="340.0" prefWidth="500.0">
+         <children>
+            <TextField fx:id="name" layoutX="247.0" layoutY="116.0" prefHeight="26.0" prefWidth="185.0">
+               <font>
+                  <Font size="16.0" />
+               </font></TextField>
+            <TextField fx:id="surname" layoutX="247.0" layoutY="188.0" prefHeight="26.0" prefWidth="185.0">
+               <font>
+                  <Font size="16.0" />
+               </font></TextField>
+            <Button fx:id="loginBtn" layoutX="198.0" layoutY="253.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="62.0" prefWidth="115.0" text="LOGIN" textFill="#364b4e">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Button>
+            <Label layoutX="121.0" layoutY="119.0" styleClass="textShadow" text="Name" textFill="#71d3e2">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="191.0" styleClass="textShadow" text="Surname" textFill="#ebf595">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="37.0" styleClass="textShadow" text="Please write name and surname to login" textFill="#ec5a5a">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorMessage" layoutX="163.0" layoutY="72.0" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label alignment="CENTER" layoutX="186.0" layoutY="7.0" prefHeight="30.0" prefWidth="122.0" styleClass="textShadow" text="Welcome" textAlignment="CENTER" textFill="#ec5a5a">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

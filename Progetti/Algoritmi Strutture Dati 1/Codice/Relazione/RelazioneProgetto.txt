@@ -1,0 +1,118 @@
+RELAZIONE PROGETTO BERTI MATTEO
+
+
+
+Esercizio 1
+
+- Scelte Progettuali
+Le strutture dati utilizzate in questo progetto sono Albero Red-Black e Linked List. 
+Ho ritenuto opportuno implementarle entrambe io, e non utilizzare quelle fornite dalle librerie java, per poter avere il controllo sia sul conteggio delle operazioni elementari che sul calcolo delle complessità.
+La scelta dell'Albero Red-Black: ho preferito un albero bilanciato di questo tipo in quanto offre altezza, operazioni di inserimento e cancellazione ad un costo di O(logn), che è un valore decisamente contenuto. 
+Come scelta tecnica per il risparmio di memoria ho utilizzato un unico nodo sentinella nil a cui tutte le foglie puntano, evitando l nodi vuoti (con l = numero di foglie dell'albero).
+La scelta di una LinkedList mi è sembrata migliore rispetto ad un ArrayList, ad esempio, per preservare principalmente spazio in memoria, come si sà l'ArrayList aumenta la propria capacità senza tenere conto di quanti altri elementi verranno immessi.
+Inoltre ho interpretato la cancellazione di un luogo come il "togliere un prodotto da quel luogo" e non rimuovere definitivamente il luogo, infatti ho optato per una diminuzione del numero, in caso si fosse arrivati a 0 anche la rimozione del luogo dalla lista. (es. delete(lab4:3) --> lab4:2. es delete(lab9:1) --> lab9 rimosso
+
+- Complessità
+La complessità degli Alberi Red-Black è nel caso peggiore O(logn) per inserimento, ricerca e cancellazione. 
+Invece per la Linked List nel caso peggiore è O(m) (m elementi in lista) per inserimento, ricerca e cancellazione in questa implementazione, in quanto ho contato anche i costi di ricerca del valore da eliminare e di raggiungimento del valore in coda per l'inserimento.
+Si può quindi indicare la complessità per inserimento, ricerca e cancellazione in questo esercizio come O(logn + m) infatti nel caso peggiore si opererà con un valore nell'ultimo elemento della lista del nodo più lontano dell'albero (logn operazioni per raggiungere il nodo dell'albero più m operazioni per raggiungere la fine della lista contenuta in esso) -> essendo O(logn) < di O(n) la complessità è O(n)
+
+- Grafici
+L'immagine ChartIn1.png mostra l'output relativo al file Input1Es1.txt, mentre l'immagine ChartIn2.png mostra l'output relativo al file Input2Es1.txt
+E' interessante notare come effettivamete il grafico giallo che somma le operazioni elementari effettuate dall'albero e quelle della linked list segua l'andamento (generalmente) del grafico logn (nei casi pessimi) effettuato sul numero totale di nodi nell'albero (n) al momento dell'operazione di inserimento/ricerca/cancellazione effettuata.
+
+File usati nell'esercizio:
+ Esercizio1.java
+ InputFileCreator.java
+ LinkedList.java
+ RedBlackTree.java
+ Input1Es1.txt
+ Input2Es1.txt
+ index1.html
+ 
+ 
+ 
+ 
+Esercizio 2
+
+- Scelte Progettuali
+Per quanto riguarda la funzione hash che converte una stringa data in intero ho ritenuto opportuno utilizzare la regola di Horner, in quanto affrontata nel corso di Metodi Numerici per il Calcolo e consigliata nel libro di testo. 
+Tale funzione converte la stringa in un polinomio di grado k (con k = numero caratteri - 1) utilizzando come coefficenti i codici ASCII dei caratteri e l'incognita x = 64 in quanto il nostro alfabeto è in base 64 (26 lettere maiuscole, 26 minuscole, i numeri da 0 a 9, il + e il /).
+NOTA: L'efficenza della funzione hash è stata calcolata come 1-(numCollisioni/numElementiTotali)
+E' stato inoltre calcolato tramite n-m*(1-((m-1)/m)^n) (n = numInserimenti, m = celleInTabella) il numero di collisioni aspettate.
+
+- Complessità
+La funzione hash tramite moltiplicazione si è visto non essere troppo efficente, infatti si ottiene un'efficenza solo dell'8.13% (m=16) e 6.25% (m=32), si nota anche come all'aumentare di m l'efficenza diminuisca. Tuttavia utilizzando C = (sqrt(5)-1)/2 come suggerisce Knuth vi è un leggero aumento di efficenza e minori collisioni, con una conseguente migliore distribuzione dei valori nella tabella.
+
+- Grafici
+Nei file m16c015.png e m32c015.png vediamo alcune informazioni, anche a livello grafico sulla distibuzione degli elementi in tabella e sull'efficenza della funzione con C=0.15. 
+Nei file m16cKnuth.png e m32cKnuth.png vediamo come viene migliorata la distribuzione deglie elementi in tabella, diminuite le collisioni e conseguente aumento di efficenza della funzione con C=(sqrt(5)-1)/2.
+
+File usati nell'esercizio:
+ Esercizio2.java
+ HashTable.java
+ Input1Es2.txt
+ Input2Es2.txt
+ Input3Es2.txt
+ Input4Es2.txt
+ index2.html
+ 
+ 
+ 
+ 
+Esercizio 3
+
+- Scelte Progettuali
+Nel metodo shiftUp (per il corretto posizionamento del nodo all'interno dell'albero) ho preferito effettuare un cambio di chiave invece che tutto il nodo in quando per lo scopo dell'esercizio (ma in generale per un albero minhead) produce lo stesso risultato ma è meno costoso (sia come op elementari che come memoria) e più chiaro.
+La scelta dell'algoritmo di ordinamento merge sort è data dalla discreta complessità computazione nel caso pessimo O(nlogn) inferiore all'O(n^2) di altri comuni algoritmi quali quicksort, bubble sort, insertion sort, ... (sempre nel caso pessimo)
+Ho scelto level order traversal in quanto estremamente adatto alla trasformazione di un albero con caratteristiche di minheap in array.
+
+- Complessità
+Per quanto riguarda l'inserimento nell'albero binario viene inserito un elemento nella prima posizione disponibile (la complessità di questa operazione è O(log(n))), inoltre viene effettuato uno shift up che nel peggiore dei casi risale tutto l'albero con un altro O(log(n)), si deduce quindi che la complessità dell'operazione è di ordine log(n).
+Nel level order traversal ogni nodo viene visitato al massimo 3 volte (1 analisi del nodo stesso, 1 quando ritorno dal nodo sinistro, 1 quando ritorno dal destro), e minimo 1 volta, quindi sarebbe 3n ovvero ha complessità O(n).
+Infine l'algoritmo di ordinamento merge sort è composto da due parti: la funzione merge (ovvero quella che fonde insieme in modo ordinato due sottoparti del vettore) che ha complessità O(n) (nel caso peggiore); e la funzione mergesort che richiama se stessa 2 volte (una sul sottoarray sinistro, e una sul destro). 
+Si deduce quindi che la complessità è O(nlog(n)).
+
+- Grafici
+Il file Output2Es3.txt viene generato automaticamente (senza immissione da terminale) e rappresenta il min heap ordinato.
+L'immagine minHeapTree.png vuole semplicemente illustare graficamente la struttura dell'albero risultante dal file Input1Es3.txt.
+Stesso risultato lo si ottiene dinamicamente dal file index3.html. (Il file JSON.txt è stato stampato per avere la possibilità di rappresentare l'albero dinamicamente con javascript)
+
+File usati nell'esercizio:
+ Esercizio3.java
+ BinaryTree.java
+ Input1Es3.txt
+ index3.html
+
+
+
+
+Esercizio 4
+
+- Scelte Progettuali
+Per la ricerca dei percorsi ho preferito utilizzare Depth First Search invece che Breadth First Search in quanto più versatile allo scopo.
+Per quanto riguarda la ricerca di entrate e uscite è vero che e*v è elevata come complessità, una delle possibili soluzioni poteva essere quella di tenere traccia in ogni vertice, oltre che i vertici a cui punta, anche quelli da cui viene puntato. 
+Il costo si ridurrebbe a O(v), tuttavia nel caso peggiore si avrebbero e=v-1 e la memoria per le liste sarebbe 2(v-1) più alta. 
+Per una scelta progettuale ho preferito preservare la memoria più che il tempo.
+Un'altra scelta è quella della determinazione dei cicli. 
+Anche path recursive, con qualche opportuna modifica, mi avrebbe potuto determinare la presenza di cicli ma il costo per analizzare il percorso da v nodi a v nodi ad un costo O(e+v) sarebbe stato decisamente troppo elevato.
+
+- Complessità
+La ricerca delle entrate/uscite ha complessità O(e*v), tuttavia nel caso peggiore tutti i v nodi puntano ad uno solo e nessuno punta a loro, quindi analizzo circa e*(v-1) con e = v-1 quindi O(v^2).
+L'algoritmo Depth First Search ha complessità O(e+v), si parte da un nodo e si attraversa il grafo esplorando ogni arco nel percorso, è stato implementato ricorsivamente per determinare i possibili percorsi da un nodo ad un altro e per determinare la presenza di cicli nel grafo.
+
+- Grafici
+Graph1.png, Graph2.png, Graph3.png rappresentano graficamente gli output rispettivamente dei file Input1Es4.txt, Input2Es4.txt, Input3Es4.txt.
+Lo stesso risultato lo si ottiene dinamicamente dal file index4.html
+
+File usati nell'esercizio:
+ Esercizio4.java
+ Graph.java
+ Input1Es4.txt
+ Input2Es4.txt
+ Input3Es4.txt
+ index4.html
+
+
+
+

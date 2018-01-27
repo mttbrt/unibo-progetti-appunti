@@ -1,0 +1,40 @@
+/*
+#364b4e dark blue (background)
+#ec5a5a red;
+#ebf595 yellow;
+#71d3e2 light blue;
+#9881be purple;
+#aaee84 green;
+*/
+
+.mainFxmlClass {
+   
+}
+
+.textShadow {
+   -fx-effect: dropshadow(gaussian, #1c2829, 5, 0.0001, 5, 5);
+}
+
+#background {
+   -fx-background-color: #364b4e;
+}
+
+#name {
+   -fx-background-color: #364b4e;
+   -fx-text-fill: #71d3e2;
+}
+
+#surname {
+   -fx-background-color: #364b4e;
+   -fx-text-fill: #ebf595;
+}
+
+#loginBtn {
+   -fx-background-color: #aaee84;
+   -fx-background-radius: 10;
+   -fx-effect: dropshadow(gaussian, #1c2829, 20, 0.0001, 5, 5);
+}
+
+#loginBtn:hover {
+   -fx-background-color: #c1eea9;
+}

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.control.SettingsController">
+   <stylesheets>
+      <URL value="@SettingsTheme.css" />
+   </stylesheets>
+   <children>
+      <Pane fx:id="background" prefHeight="700.0" prefWidth="1000.0">
+         <children>
+            <Pane prefHeight="50.0" prefWidth="700.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="7.0" prefHeight="50.0" prefWidth="156.0" styleClass="textShadow" text="Settings" textFill="#ebf595">
+                     <font>
+                        <Font name="System Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="welcomeLbl" alignment="CENTER" layoutX="174.0" layoutY="15.0" prefHeight="25.0" prefWidth="505.0" styleClass="textShadow" text="Welcome X Y choose the game settings" textFill="#ebf595">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <HBox layoutX="-1.0" layoutY="50.0" prefHeight="110.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="110.0" prefWidth="175.0">
+                     <children>
+                        <Text fill="#71d3e2" layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="Plane icon selected" textAlignment="CENTER" wrappingWidth="155.9999888241291" />
+                        <ImageView fx:id="planeSetImage" fitHeight="35.5" fitWidth="75.0" layoutX="45.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="plane1" mnemonicParsing="false" onAction="#handle" prefHeight="110.0" prefWidth="175.0" />
+                  <Button fx:id="plane2" mnemonicParsing="false" onAction="#handle" prefHeight="110.0" prefWidth="175.0" />
+                  <Button fx:id="plane3" mnemonicParsing="false" onAction="#handle" prefHeight="110.0" prefWidth="175.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="-1.0" layoutY="162.0" prefHeight="110.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="110.0" prefWidth="175.0">
+                     <children>
+                        <Text fill="#ec5a5a" layoutX="15.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="Number of shots" textAlignment="CENTER" wrappingWidth="141.9999888241291" />
+                        <ImageView fx:id="shotsSetImage" fitHeight="16.0" fitWidth="75.0" layoutX="50.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="shoot1" mnemonicParsing="false" onAction="#handle" prefHeight="110.0" prefWidth="175.0" />
+                  <Button fx:id="shoot2" mnemonicParsing="false" onAction="#handle" prefHeight="110.0" prefWidth="175.0" />
+                  <Button fx:id="shoot3" mnemonicParsing="false" onAction="#handle" prefHeight="110.0" prefWidth="175.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="1.0" layoutY="274.0" prefHeight="110.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="110.0" prefWidth="175.0">
+                     <children>
+                        <Text fill="#aaee84" layoutX="26.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="Bullet speed" textAlignment="CENTER" wrappingWidth="119.9999956022948" />
+                        <ImageView fx:id="speedSetImage" fitHeight="65.0" fitWidth="85.0" layoutX="44.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="speed1" mnemonicParsing="false" onAction="#handle" prefHeight="110.0" prefWidth="173.0" />
+                  <Button fx:id="speed2" mnemonicParsing="false" onAction="#handle" prefHeight="110.0" prefWidth="175.0" />
+                  <Button fx:id="speed3" mnemonicParsing="false" onAction="#handle" prefHeight="110.0" prefWidth="179.0" />
+               </children>
+            </HBox>
+            <VBox layoutY="385.0" prefHeight="315.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="48.0" prefWidth="700.0">
+                     <children>
+                        <Label layoutX="340.0" layoutY="10.0" styleClass="textShadow" text="RANKING" textFill="#ebf595">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <GridPane fx:id="rankingPane" prefHeight="274.0" prefWidth="700.0" styleClass="textShadow">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="49.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="277.0" minWidth="10.0" prefWidth="168.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="174.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="155.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="149.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="173.0" text="Name" textFill="#ec5a5a" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="23.0" prefWidth="175.0" text="Surname" textFill="#ec5a5a" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="175.0" text="Score" textFill="#ec5a5a" GridPane.columnIndex="3">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="24.0" prefWidth="175.0" text="Date" textFill="#ec5a5a" GridPane.columnIndex="4">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="43.0" text="1" textFill="#71d3e2" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="43.0" text="2" textFill="#aaee84" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="43.0" text="3" textFill="#71d3e2" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="43.0" text="4" textFill="#aaee84" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="43.0" text="5" textFill="#71d3e2" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="43.0" text="6" textFill="#aaee84" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="43.0" text="7" textFill="#71d3e2" GridPane.rowIndex="7">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="43.0" text="8" textFill="#aaee84" GridPane.rowIndex="8">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="43.0" text="9" textFill="#71d3e2" GridPane.rowIndex="9">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="43.0" text="10" textFill="#aaee84" GridPane.rowIndex="10">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children></VBox>
+            <Label alignment="CENTER" layoutX="746.0" layoutY="17.0" prefHeight="45.0" prefWidth="221.0" styleClass="textShadow" text="Information" textFill="#ebf595">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Button fx:id="startBtn" layoutX="764.0" layoutY="572.0" mnemonicParsing="false" onAction="#startBtn" prefHeight="100.0" prefWidth="190.0" text="START" textFill="#364b4e">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+            </Button>
+            <ScrollPane fx:id="scrollPane" layoutX="739.0" layoutY="77.0" prefHeight="440.0" prefWidth="248.0">
+               <content>
+                  <Pane fx:id="infoSection" prefHeight="979.0" prefWidth="230.0">
+                     <children>
+                        <Text fill="#ebf595" layoutX="12.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="Aim N' Shoot it's a simple game based on a central cannon that can be moved and shoot multiple bullets with the aim to hit a flying airplane." wrappingWidth="201.7294921875" />
+                        <Text fill="#ebf595" layoutX="11.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="First of all is necessary to write name and surname to login. " wrappingWidth="187.00001868605614" />
+                        <Text fill="#ebf595" layoutX="12.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="In the settings section the player can interactively customize his game session. For example he/she can choose the plane layout, the number and the speed of bullets shot by the cannon." wrappingWidth="187.00001868605614" />
+                        <Text fill="#ebf595" layoutX="13.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="Furthermore in this section are displayed the 10 best scores with date, name and surname of the player." wrappingWidth="187.00001868605614" />
+                        <Text fill="#ebf595" layoutX="14.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="When the game starts everything is shown in the lower side of the window: all the information which the player needs (and a bit more)." wrappingWidth="196.99999472498894" />
+                        <Text fill="#ebf595" layoutX="13.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="The game is over when are shot 10 (groups of) bullets. In the last section the player can see his score and choose if quit or play again." wrappingWidth="187.00001868605614" />
+                        <Text fill="#ec5a5a" layoutX="13.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="Keyboard comands:" wrappingWidth="187.00001868605614" />
+                        <Text fill="#ec5a5a" layoutX="13.0" layoutY="558.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="RIGHT_ARROW:" wrappingWidth="119.99999013543129">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#ec5a5a" layoutX="13.0" layoutY="575.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="moves the cannon to the right side." wrappingWidth="187.00001868605614" />
+                        <Text fill="#ec5a5a" layoutX="12.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="LEFT_ARROW:" wrappingWidth="119.99999013543129">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#ec5a5a" layoutX="12.0" layoutY="629.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="moves the cannon to the left side." wrappingWidth="187.00001868605614" />
+                        <Text fill="#ec5a5a" layoutX="11.0" layoutY="666.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="ENTER:" wrappingWidth="119.99999013543129">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#ec5a5a" layoutX="11.0" layoutY="683.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="the cannon shoots." wrappingWidth="187.00001868605614" />
+                        <Text fill="#71d3e2" layoutX="12.0" layoutY="729.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="About Developers" wrappingWidth="200.9999901354313">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#71d3e2" layoutX="12.0" layoutY="751.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="The developers are Matteo Berti, Vincenzo Bota and Jacopo Gamberini. This game has been developed for a university project, using Javafx, Java, FXML, and CSS as programming languages." wrappingWidth="187.00001868605614" />
+                        <Text fill="#71d3e2" layoutX="13.0" layoutY="886.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="textShadow" text="About game design we get inspired by material design, a particolar creative way to represent graphically objects with a combination of colors and shadows." wrappingWidth="187.00001868605614" />
+                     </children>
+                  </Pane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

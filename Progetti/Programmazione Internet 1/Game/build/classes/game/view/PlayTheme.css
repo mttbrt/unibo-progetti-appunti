@@ -1,0 +1,35 @@
+/*
+#364b4e dark blue (background)
+#ec5a5a red;
+#ebf595 yellow;
+#71d3e2 light blue;
+#9881be purple;
+#aaee84 green;
+*/
+
+.mainFxmlClass {
+
+}
+
+.textShadow {
+   -fx-effect: dropshadow(gaussian, #1c2829, 20, 0.0001, 5, 5);
+}
+
+#background {
+   -fx-background-image: url("images/backgroundImage.png");
+   -fx-effect: innershadow(gaussian, #1c2829, 30, 0.00001, 0, -1);
+}
+
+#bottomPane {
+   -fx-background-color: #364b4e;
+}
+
+#gameOver {
+   -fx-background-color: #aaee84;
+   -fx-background-radius: 10;
+   -fx-effect: dropshadow(gaussian, #1c2829, 20, 0.0001, 5, 5);
+}
+
+#gameOver:hover {
+   -fx-background-color: #c1eea9;
+}
