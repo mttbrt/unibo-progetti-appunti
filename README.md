@@ -10,3 +10,12 @@ Anno Immatricolazione [2015/2016](http://corsi.unibo.it/Laurea/InformaticaManage
 * Sistemi Operativi 
 
 ## - Appunti
+* Algoritmi e Strutture Dati
+* Basi di Dati
+* Decisioni e Processi Cognitivi in Ambienti di Rete
+* Finanza Aziendale
+* Ingegneria del Software
+* Microeconomia
+* Sicurezza
+* Sistemi Operativi
+* Statistica
