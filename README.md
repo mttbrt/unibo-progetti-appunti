@@ -6,6 +6,9 @@ Anno Immatricolazione [2015/2016](http://corsi.unibo.it/Laurea/InformaticaManage
 ## - Progetti
 * Algoritmi e Strutture Dati 1
 * Algoritmi e Strutture Dati 2
+* Basi di Dati
+* Ingegneria del Software
+* Laboratorio Applicazioni Mobili
 * Programmazione Internet 1
 * Sistemi Operativi 
 
