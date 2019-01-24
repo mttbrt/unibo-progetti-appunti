@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Robocar</string>
+
+    <string name="value">Valore</string>
+    <string name="range">Gamma</string>
+    <string name="sensor">Sensore</string>
+
+    <!-- Menu -->
+    <string name="menu_record">Registra</string>
+    <string name="menu_settings">Impostazioni</string>
+    <string name="menu_sensors">Sensori</string>
+    <string name="menu_recordings">Registrazioni</string>
+
+    <!-- Devices -->
+    <string name="devices_title">Dispositivi Accoppiati</string>
+    <string name="devices_bt_not_avail">Bluetooth non disponibile</string>
+    <string name="devices_dev_not_found">Nessun dispositivo accoppiato trovato</string>
+    <string name="devices_dialog_title">Connessione...</string>
+    <string name="devices_dialog_content">Attendere per favore!</string>
+
+    <!-- Controller -->
+    <string name="controller_reset_btn">Azzera notifica</string>
+    <string name="controller_error_db">Errore aprendo il database</string>
+    <string name="controller_rec_on">Registrazione: ON</string>
+    <string name="controller_rec_off">Registrazione: OFF</string>
+    <string name="controller_no_command">Nessun comando rilevato</string>
+    <string name="controller_error_saving">Errore durante il salvataggio della registrazione</string>
+    <string name="controller_error_binding">Il servizio richiesto non esiste, o non è permesso accedervi</string>
+    <string name="controller_notification_title">Robocar Attenzione!</string>
+    <string name="controller_notification_content">%1$d volte è stata registrata una distanza inferiore a 10 CM da un ostacolo.</string>
+
+    <!-- Settings -->
+    <string name="title_activity_settings">Impostazioni</string>
+    <string name="settings_title">Impostazioni</string>
+    <string name="settings_forward_comm">Comando avanti</string>
+    <string name="settings_right_comm">Comando destra</string>
+    <string name="settings_backward_comm">Comando indietro</string>
+    <string name="settings_left_comm">Comando sinistra</string>
+    <string name="settings_info">*Tocca l\'elemento a fianco della descrizione per cambiarne il valore.</string>
+    <string name="settings_standard">Impostazioni standard</string>
+    <string name="settings_problem_list">Problemi nella lista dei sensori</string>
+    <string name="settings_problem_standard">Il sensore di prossimità o di game rotation non è stato trovato</string>
+    <string name="settings_saved">Preferenze aggiornate</string>
+    <string name="settings_err1">% Min e % Max devono essere minori o uguali ad 1</string>
+    <string name="settings_err2">% Min deve essere inferiore o uguale a Max</string>
+    <string name="settings_err3">Valore non valido (min: 0 - max: 5)</string>
+
+    <string name="settings_dialog_close">CHIUDI</string>
+    <string name="settings_dialog_val_desc">Scegli la posizione (min 0 max 5) del vettore di valori ritornato da SensorEvent</string>
+    <string name="settings_dialog_range_desc">Inserire un valore tra 0 e 1</string>
+
+    <!-- Sensors -->
+    <string name="sensors_title">Controller</string>
+    <string name="sensors_direction">Direzione</string>
+    <string name="sensors_forward">Avanti</string>
+    <string name="sensors_right">Destra</string>
+    <string name="sensors_backward">Indietro</string>
+    <string name="sensors_left">Sinistra</string>
+    <string name="sensors_reset_btn">Azzera notifica</string>
+    <string name="sensors_reset_calibrations">Azzera calibrazioni</string>
+    <string name="sensors_calibration_on">Calibrazione: ON</string>
+    <string name="sensors_calibration_off">Calibrazione: OFF</string>
+    <string name="sensors_rec_on">Registrazione: ON</string>
+    <string name="sensors_rec_off">Registrazione: OFF</string>
+    <string name="sensors_problem_compat">Problema di compatibilità hardware</string>
+
+    <!-- Recordings -->
+    <string name="recordings_title">Registrazioni</string>
+    <string name="recordings_dialog_title">Cancellazione</string>
+    <string name="recordings_dialog_content">Cancellare elemento %1$s?</string>
+    <string name="recordings_dialog_positive">SI</string>
+    <string name="recordings_dialog_negative">NO</string>
+    <string name="recordings_tot_duration">Durata totale: %1$d secondi</string>
+    <string name="recordings_completed">Completato</string>
+
+</resources>

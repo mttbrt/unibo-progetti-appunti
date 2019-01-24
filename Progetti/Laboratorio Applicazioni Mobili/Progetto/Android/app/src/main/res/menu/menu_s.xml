@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<item
+    android:id="@+id/action_start_stop"
+    android:icon="@android:drawable/ic_media_play"
+    android:title="@string/menu_start_stop"
+    android:tint="@color/colorAccent"
+    app:showAsAction="ifRoom"/>
+
+<item
+    android:id="@+id/action_record"
+    android:icon="@android:drawable/ic_menu_camera"
+    android:title="@string/menu_record"
+    android:tint="@color/colorAccent"
+    app:showAsAction="ifRoom"/>
+
+<item
+    android:id="@+id/action_settings"
+    android:icon="@android:drawable/ic_menu_preferences"
+    android:title="@string/menu_settings"
+    android:tint="@color/colorAccent"
+    app:showAsAction="ifRoom"/>
+
+<item android:id="@+id/action_custom_controller"
+    android:title="@string/menu_controller"
+    app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_recordings"
+        android:title="@string/menu_recordings"
+        app:showAsAction="never" />
+
+</menu>

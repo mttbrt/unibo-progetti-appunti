@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">Robocar</string>
+
+    <string name="empty">-</string>
+    <string name="value">Value</string>
+    <string name="range">Range</string>
+    <string name="sensor">Sensor</string>
+
+    <!-- Menu -->
+    <string name="menu_record">Record</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_sensors">Sensors</string>
+    <string name="menu_controller">Controller</string>
+    <string name="menu_recordings">Recordings</string>
+    <string name="menu_start_stop">Start/Stop</string>
+
+    <!-- Devices -->
+    <string name="devices_title">Paired Devices</string>
+    <string name="devices_bt_not_avail">Bluetooth not available</string>
+    <string name="devices_dev_not_found">No Paired Bluetooth Devices Found</string>
+    <string name="devices_dialog_title">Connecting...</string>
+    <string name="devices_dialog_content">Please wait!</string>
+
+    <!-- Controller -->
+    <string name="controller_title">Controller</string>
+    <string name="controller_reset_btn">Reset warning counter</string>
+    <string name="controller_error_db">Error opening database</string>
+    <string name="controller_rec_on">Recording: ON</string>
+    <string name="controller_rec_off">Recording: OFF</string>
+    <string name="controller_no_command">No command recorded</string>
+    <string name="controller_error_saving">Error saving recording</string>
+    <string name="controller_error_binding">The requested service does not exist, or this client is not allowed access to it</string>
+    <string name="controller_distance">%1$s CM</string>
+    <string name="controller_channel_name">RobocarChannel</string>
+    <string name="controller_channel_description">Robocar Smartphone controller</string>
+    <string name="controller_notification_title">Robocar Alert!</string>
+    <string name="controller_notification_content">%1$d times has been recorded a distance of less than 10 CM from an obstacle.</string>
+
+    <!-- Settings -->
+    <string name="title_activity_settings">Settings</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_forward_comm">Forward command</string>
+    <string name="settings_right_comm">Right command</string>
+    <string name="settings_backward_comm">Backward command</string>
+    <string name="settings_left_comm">Left command</string>
+    <string name="settings_info">*Touch the item next to the description to change its value.</string>
+    <string name="settings_standard">Standard settings</string>
+    <string name="settings_problem_list">Problems getting sensors list</string>
+    <string name="settings_problem_standard">Proximity sensor or game rotation sensor not found</string>
+    <string name="settings_saved">Preferences updated</string>
+    <string name="settings_err1">Min % and Max % must be less than or equal 1</string>
+    <string name="settings_err2">Min % must be less than or equal Max</string>
+    <string name="settings_err3">Value out of bounds (min: 0 - max: 5)</string>
+
+    <string name="settings_dialog_close">CLOSE</string>
+    <string name="settings_dialog_val_desc">Choose the position (min 0 max 5) of the array of values returned by SensorEvent</string>
+    <string name="settings_dialog_range_desc">Please insert values between 0 and 1</string>
+
+    <!-- Sensors -->
+    <string name="sensors_title">Controller</string>
+    <string name="sensors_direction">Direction</string>
+    <string name="sensors_forward">Forward</string>
+    <string name="sensors_right">Right</string>
+    <string name="sensors_backward">Backward</string>
+    <string name="sensors_left">Left</string>
+    <string name="sensors_empty_range">- : -</string>
+    <string name="sensors_reset_btn">Reset warning counter</string>
+    <string name="sensors_reset_calibrations">Reset calibrations</string>
+    <string name="sensors_calibration_on">Calibration: ON</string>
+    <string name="sensors_calibration_off">Calibration: OFF</string>
+    <string name="sensors_rec_on">Recording: ON</string>
+    <string name="sensors_rec_off">Recording: OFF</string>
+    <string name="sensors_problem_compat">Hardware compatibility issue</string>
+
+    <!-- Recordings -->
+    <string name="recordings_title">Recordings</string>
+    <string name="recordings_dialog_title">Deletion</string>
+    <string name="recordings_dialog_content">Delete item %1$s?</string>
+    <string name="recordings_dialog_positive">YES</string>
+    <string name="recordings_dialog_negative">NO</string>
+    <string name="recordings_tot_duration">Total duration: %1$d seconds</string>
+    <string name="recordings_completed">Completed</string>
+
+</resources>
