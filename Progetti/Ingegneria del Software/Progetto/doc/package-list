@@ -1,0 +1,6 @@
+com.onlinevotingsystem.client
+com.onlinevotingsystem.client.gui
+com.onlinevotingsystem.client.model
+com.onlinevotingsystem.client.service
+com.onlinevotingsystem.server
+com.onlinevotingsystem.test

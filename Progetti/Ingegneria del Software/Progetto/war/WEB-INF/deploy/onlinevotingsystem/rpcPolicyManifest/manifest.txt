@@ -1,0 +1,3 @@
+# Module onlinevotingsystem
+# RPC service class, partial path of RPC policy file
+com.onlinevotingsystem.client.service.StandardService, 121874FB31B9BF5C9233A4F1A3E2809D.gwt.rpc

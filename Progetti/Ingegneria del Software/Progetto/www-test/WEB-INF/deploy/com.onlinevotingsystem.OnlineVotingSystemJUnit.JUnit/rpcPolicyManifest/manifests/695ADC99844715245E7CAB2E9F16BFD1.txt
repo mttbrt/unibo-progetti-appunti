@@ -1,0 +1,2 @@
+serviceClass: com.onlinevotingsystem.client.service.StandardService
+path: 829DEB50675B5AC0263DF3A76B63174D.gwt.rpc
