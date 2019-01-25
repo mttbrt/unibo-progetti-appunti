@@ -25,3 +25,6 @@ Anno Immatricolazione [2015/2016](http://corsi.unibo.it/Laurea/InformaticaManage
 * Storia dell'Informatica
 * Tecnologie Web
 * Teoria dell'Impresa
+
+## - Tesi
+* Tesi di Laurea Triennale
