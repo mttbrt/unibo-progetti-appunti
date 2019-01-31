@@ -4,13 +4,13 @@ CdL [Informatica per il Management](http://corsi.unibo.it/Laurea/InformaticaMana
 Anno Immatricolazione [2015/2016](http://corsi.unibo.it/Laurea/InformaticaManagement/Pagine/PianiDidattici.aspx?AnnoAccademico=2015)
 
 ## - Progetti
-* Algoritmi e Strutture Dati 1
-* Algoritmi e Strutture Dati 2
+* Algoritmi e Strutture Dati 1 + 2
 * Basi di Dati
 * Ingegneria del Software
 * Laboratorio Applicazioni Mobili
-* Programmazione Internet 1
+* Programmazione Internet
 * Sistemi Operativi 
+* Tecnologie Web
 
 ## - Appunti
 * Algoritmi e Strutture Dati

@@ -1,0 +1,389 @@
+<html>
+<head>
+
+    <title>AlphaTube</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <!-- Meta-Tags -->
+    <meta charset='UTF-8'>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='keywords' content='video, player, recommendation, youtube, music'>
+    <meta name='description' content='A simple recommendation system for music videos'>
+    <meta name='subject' content='Recommendation System'>
+    <meta name='copyright' content='TechWebTeam'>
+    <meta name='language' content='EN'>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="//www.youtube.com/iframe_api"></script>
+    <script src="js/YTPlayer.js"></script>
+    <script src="js/scripts.js"></script>
+
+</head>
+
+<body>
+    <div id="overlay"></div>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="modal fade" role="dialog" aria-label="Video search modal">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Find a video!</h4>
+                </div>
+
+                <div class="modal-body" role="form">
+                   <div class="height-32">
+                      <input id="search-query" type="text" name="search_query" class="form-control">
+                      <i id="search-btn" class="fa fa-search"></i>
+                   </div>
+                </div>
+
+                <div class="modal-footer">
+                    <p>You can search by keywords or by video code.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="top-bar">
+       <span class="searchicon" data-toggle="modal" data-target="#search-modal">
+           <i class="fa fa-search"></i>
+       </span>
+
+       <span id="navicon" class="navicon">
+           <i class="fa fa-bars"></i>
+       </span>
+
+       <h1 class="app-title" aria-label="Titolo pagina web: ANY">
+           ANY
+       </h1>
+
+       <h1 class="app-subtitle" aria-label="Sottotitolo pagina web: AlphaTube's Not YouTube">
+           AlphaTube's Not YouTube
+       </h1>
+    </div>
+
+    <!-- Sidebar on the right side -->
+    <div id="sidenav" class="sidenav" role="navigation" aria-expanded="false">
+        <a id="closebtn" class="closebtn" role="button" aria-label="Chiudi">
+            &times;
+        </a>
+        <a section="#player-section" class="item" role="menuitem">
+            Video Player
+        </a>
+        <a section="#recommender-section" class="item" role="menuitem">
+            Recommender
+        </a>
+        <a section="#team-section" class="item" role="menuitem">
+            Developers
+        </a>
+    </div>
+
+
+    <!-- Main div -->
+    <div id="main" role="main">
+
+        <div class="container-fluid">
+            <div class="row" id="player-section" role="region" aria-label="Contenitore del videoplayer">
+                <div class="col-md-8">
+                   <div id="video-player"></div>
+                </div>
+
+                <div class="col-md-4" role="complementary">
+                    <ul class="nav nav-pills pills" role="menu">
+                        <li class="active" role="menuitem">
+                            <a data-toggle="pill" href="#info" aria-selected="true">
+                                Info
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a data-toggle="pill" href="#video" aria-selected="false">
+                                Video
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a data-toggle="pill" href="#comments" aria-selected="false">
+                                Comments
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a data-toggle="pill" href="#wiki" id="wiki-pill" aria-selected="false">
+                                Wiki
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="info" class="tab-pane fade in active">
+                            <h3 class="video-title"></h3>
+                            <h5 class="video-code"></h5>
+                            <h5 class="video-release-date"></h5>
+                            <h5 class="video-channel"></h5>
+                            <p class="video-description"></p>
+                            <span class="video-tags"></span>
+                        </div>
+
+                        <div id="video" class="tab-pane fade">
+                           <h3>Video information</h3>
+                           <h5 class="details-duration">Duration:</h5>
+                           <h5 class="details-definition">Definition:</h5>
+                           <h5 class="details-dimension">Dimension:</h5>
+                           <h5 class="details-views">Views:</h5>
+                           <h5 class="details-like">Likes:</h5>
+                           <h5 class="details-dislike">Dislikes:</h5>
+                           <h5 class="details-recomm">Recommendation: <b>no recommendation source.</b></h5><br/>
+                           <div class="add-info"></div>
+                        </div>
+
+                        <div id="comments" class="tab-pane fade">
+                           <h3>Relevant comments</h3>
+                           <div></div>
+                        </div>
+
+                        <div id="wiki" class="tab-pane fade"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="recommender-section" role="region" aria-label="Sezione con lista dei recommender">
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs tabs nav-justified" role="tablist">
+                        <li class="active">
+                            <a data-toggle="tab" href="#starter" id="starter-tab" aria-expanded="true">
+                                Starter
+                            </a>
+                        </li>
+                        <li aria-expanded="false">
+                            <a data-toggle="tab" href="#random" id="random-tab">
+                               Random
+                            </a>
+                        </li>
+                        <li aria-expanded="false">
+                            <a data-toggle="tab" href="#search" id="search-tab">
+                               Search
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#related" id="related-tab" aria-expanded="false">
+                               Related
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#recent" id="recent-tab" aria-expanded="false">
+                               Recent
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#fvitali" id="fvitali-tab" aria-expanded="false">
+                               Fvitali
+                            </a>
+                        </li>
+                        <li class="dropdown" role="tab">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#popularity" role="menu">
+                               Popularity <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li role="menuitem"><a href="#popularity-abs-loc" id="popularity-abs-loc-tab" data-toggle="tab" aria-expanded="false">Absolute Local</a></li>
+                              <li role="menuitem"><a href="#popularity-rel-loc" id="popularity-rel-loc-tab" data-toggle="tab" aria-expanded="false">Relative Local</a></li>
+                              <li role="menuitem"><a href="#popularity-abs-glo" id="popularity-abs-glo-tab" data-toggle="tab" aria-expanded="false">Absolute Global</a></li>
+                              <li role="menuitem"><a href="#popularity-rel-glo" id="popularity-rel-glo-tab" data-toggle="tab" aria-expanded="false">Relative Global</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" role="tab">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#similarity" role="menu">
+                               Similarity <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                              <li role="menuitem"><a href="#similarity-artist" id="similarity-artist-tab" data-toggle="tab" aria-expanded="false">Artist</a></li>
+                              <li role="menuitem"><a href="#similarity-genre" id="similarity-genre-tab" data-toggle="tab" aria-expanded="false">Genre</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                       <div id="starter" class="tab-pane fade in active pre-scrollable" role="listbox">
+                            <div class="col-md-12">
+                               <h3>Sorry!</h3>
+                               <h5>Nothing to show, we apologise for the inconvenience.</h5>
+                            </div>
+                        </div>
+
+                        <div id="random" class="tab-pane fade in pre-scrollable" role="listbox">
+                            <div class="col-md-12">
+                               <h3>Sorry!</h3>
+                               <h5>Nothing to show, we apologise for the inconvenience.</h5>
+                            </div>
+                        </div>
+
+                        <div id="search" class="tab-pane fade in pre-scrollable" role="listbox">
+                           <div class="col-md-12">
+                              <h3>Hey!</h3>
+                              <h5>Nothing to show, try to search something.</h5>
+                           </div>
+                        </div>
+
+                        <div id="related" class="tab-pane fade in pre-scrollable" role="listbox">
+                           <div class="col-md-12">
+                               <h3>Sorry!</h3>
+                               <h5>Nothing to show, we apologise for the inconvenience.</h5>
+                            </div>
+                        </div>
+
+                        <div id="recent" class="tab-pane fade in pre-scrollable" role="listbox">
+                          <div class="col-md-12">
+                              <h3>Sorry!</h3>
+                              <h5>Nothing to show, we apologise for the inconvenience.</h5>
+                           </div>
+                        </div>
+
+                        <div id="fvitali" class="tab-pane fade in pre-scrollable" role="listbox">
+                          <div class="col-md-12">
+                              <h3>Sorry!</h3>
+                              <h5>Nothing to show, we apologise for the inconvenience.</h5>
+                           </div>
+                        </div>
+
+                        <div id="popularity-abs-loc" class="tab-pane fade in pre-scrollable" role="listbox">
+                          <div class="col-md-12">
+                              <h3>Sorry!</h3>
+                              <h5>Nothing to show, we apologise for the inconvenience.</h5>
+                           </div>
+                        </div>
+
+                        <div id="popularity-rel-loc" class="tab-pane fade in pre-scrollable" role="listbox">
+                          <div class="col-md-12">
+                              <h3>Sorry!</h3>
+                              <h5>Nothing to show, we apologise for the inconvenience.</h5>
+                           </div>
+                        </div>
+
+                        <div id="popularity-abs-glo" class="tab-pane fade in pre-scrollable" role="listbox">
+                          <div class="col-md-12">
+                              <h3>Sorry!</h3>
+                              <h5>Nothing to show, we apologise for the inconvenience.</h5>
+                           </div>
+                        </div>
+
+                        <div id="popularity-rel-glo" class="tab-pane fade in pre-scrollable" role="listbox">
+                          <div class="col-md-12">
+                              <h3>Sorry!</h3>
+                              <h5>Nothing to show, we apologise for the inconvenience.</h5>
+                           </div>
+                        </div>
+
+                        <div id="similarity-artist" class="tab-pane fade in pre-scrollable" role="listbox">
+                          <div class="col-md-12">
+                              <h3>Sorry!</h3>
+                              <h5>Nothing to show, we apologise for the inconvenience.</h5>
+                           </div>
+                        </div>
+
+                        <div id="similarity-genre" class="tab-pane fade in pre-scrollable" role="listbox">
+                          <div class="col-md-12">
+                              <h3>Sorry!</h3>
+                              <h5>Nothing to show, we apologise for the inconvenience.</h5>
+                           </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" id="team-section" role="contentinfo" aria-label="Informazioni sui membri del progetto">
+                <div class="col-md-12">
+                    <h1>Developers Team</h1>
+
+                    <div class="col-md-3 team-member">
+                       <img src="img/dev1.jpg" alt="Foto Berti Matteo"/>
+                       <h3>Berti Matteo</h3>
+                       <h5>767035</h5>
+                       <p>Studente in Informatica per il Management.</p>
+                       <p>In questo progetto si &egrave; occupato di:</p>
+                       <ul style="text-align:left">
+                         <li>Front-end</li>
+                         <li>Recommender Local Relative Popularity</li>
+                         <li>Recommender Local Absolute Popularity</li>
+                         <li>Recommender Global Relative Popularity</li>
+                         <li>Recommender Global Absolute Popularity</li>
+                         <li>Recommender Artist Similarity</li>
+                         <li>Recommender Genre Similarity</li>
+                         <li>API globpop</li>
+                         <li>Gestione pulsanti back e forward</li>
+                         <li>Sezione wikiedia (con link in page)</li>
+                         <li>Ricerca per tag</li>
+                         <li>Posizionamento del video ad uno specifico minuto (nella sezione commenti)</li>
+                       </ul>
+                       <button type="button" class="btn btn-danger" onclick="window.location.href='mailto:matteo.berti11@studio.unibo.it'" aria-label="Invia email Matteo Berti">Email</button>
+                    </div>
+
+                    <div class="col-md-3 team-member">
+                       <img src="img/dev2.jpg" alt="Foto Bota Vicentiu"/>
+                       <h3>Bota Vicentiu</h3>
+                       <h5>766415</h5>
+                       <p>Studente in Informatica per il Management.</p>
+                       <p>In questo progetto si &egrave; occupato di:</p>
+                       <ul style="text-align:left">
+                         <li>Front-end</li>
+                         <li>Recommender Random</li>
+                         <li>Visualizzazione commenti di un video</li>
+                         <li>Visualizzazione mobile-first e responsive design</li>
+                         <li>Gesione front-end dei click dei video e successiva esecuzione</li>
+                       </ul>
+                       <button type="button" class="btn btn-success" onclick="window.location.href='mailto:vladutvicentiu.bota@studio.unibo.it'" aria-label="Invia email a Bota Vicentiu">Email</button>
+                    </div>
+
+                    <div class="col-md-3 team-member">
+                       <img src="img/dev3.jpg" alt="Foto Righi Massimo"/>
+                       <h3>Righi Massimo</h3>
+                       <h5>758263</h5>
+                       <p>Studente in Informatica per il Management.</p>
+                       <p>In questo progetto si &egrave; occupato di:</p>
+                       <ul style="text-align:left">
+                         <li>Front-end</li>
+                         <li>Recommender Related</li>
+                         <li>Recommender Search</li>
+                         <li>Recommender Vitali</li>
+                         <li>Visualizzazione video corrente</li>
+                         <li>Video visualizzato dopo 15 secondi (effettivi)</li>
+                         <li>Accessibilit&agrave;/ARIA</li>
+                         <li>Sezione team</li>
+                       </ul>
+                       <button type="button" class="btn btn-primary" onclick="window.location.href='mailto:massimo.righi4@studio.unibo.it'" aria-label="Invia email a Righi Massimo">Email</button>
+                    </div>
+
+                    <div class="col-md-3 team-member">
+                       <img src="img/dev4.jpg" alt="Foto Zanarella Leonardo"/>
+                       <h3>Zanarella Leonardo</h3>
+                       <h5>753996</h5>
+                       <p>Studente in Informatica per il Management.</p>
+                       <p>In questo progetto si &egrave; occupato di:</p>
+                       <ul style="text-align:left">
+                         <li>Front-end</li>
+                         <li>Recommender Starting List</li>
+                         <li>Recommender Recent</li>
+                         <li>Ottenimento informazioni tecniche video da Youtube</li>
+                         <li>Divisione codice tra server e un modulo</li>
+                         <li>Conversione dei dati ricevuti dalle API (es. durata video)</li>
+                       </ul>
+                       <button type="button" class="btn btn-warning" onclick="window.location.href='mailto:leonardo.zanarella@studio.unibo.it'" aria-label="Invia email a Zanarella Leonardo">Email</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
