@@ -1,9 +1,9 @@
 # Università
-### Progetti e Appunti Università <br />
-CdL [Informatica per il Management](http://corsi.unibo.it/Laurea/InformaticaManagement/Pagine/default.aspx) - [UNIBO](http://www.unibo.it/it)  <br/>
-Anno Immatricolazione [2015/2016](http://corsi.unibo.it/Laurea/InformaticaManagement/Pagine/PianiDidattici.aspx?AnnoAccademico=2015)
+## Triennale - Progetti, Appunti e Tesi <br />
+CdL [Informatica per il Management](https://corsi.unibo.it/laurea/InformaticaManagement) - [UNIBO](http://www.unibo.it/it)  <br/>
+Anno Immatricolazione [2015/2016](https://corsi.unibo.it/laurea/InformaticaManagement/insegnamenti?AnnoAccademico=2015)
 
-## - Progetti
+### - Progetti
 * Algoritmi e Strutture Dati 1 + 2
 * Basi di Dati
 * Ingegneria del Software
@@ -12,7 +12,7 @@ Anno Immatricolazione [2015/2016](http://corsi.unibo.it/Laurea/InformaticaManage
 * Sistemi Operativi 
 * Tecnologie Web
 
-## - Appunti
+### - Appunti
 * Algoritmi e Strutture Dati
 * Basi di Dati
 * Decisioni e Processi Cognitivi in Ambienti di Rete
@@ -26,5 +26,16 @@ Anno Immatricolazione [2015/2016](http://corsi.unibo.it/Laurea/InformaticaManage
 * Tecnologie Web
 * Teoria dell'Impresa
 
-## - Tesi
+### - Tesi
 * Tesi di Laurea Triennale
+
+## Magistrale - Progetti, Appunti e Tesi <br />
+CdLM [Informatica - Tecniche del Software](https://corsi.unibo.it/magistrale/informatica) - [UNIBO](http://www.unibo.it/it)  <br/>
+Anno Immatricolazione [2018/2019](https://corsi.unibo.it/magistrale/informatica/insegnamenti/piano?code=8028&year=2018&manifest=Manifesto-2018_8028_000_A58_2018)
+
+### - Progetti
+
+### - Appunti
+
+### - Tesi
+
