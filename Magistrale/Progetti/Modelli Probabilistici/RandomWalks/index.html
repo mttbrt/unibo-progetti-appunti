@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+
+		<title>Random Walks</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+		<script type="text/javascript" src="randomNumbers.json"></script>
+		<script src="scripts.js"></script>
+		<style>
+			body {
+				background-color: #212121;
+				color: rgb(175, 175, 175);
+			}
+			#results img {
+				padding: 10px;
+				border-radius: 8px;
+				background-color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<a class="btn btn-danger" href="../" style="z-index:999; position:fixed; right:0; margin:10px 10px;">HOME</a>
+		<div class="row">
+			<div class="col-md-12" style="text-align:center;">
+				<h1>Passeggiate aleatorie</h1>
+				<div class="col-md-6">
+					<div class="col-md-4">
+						<div class="form-group">
+						  <label for="N">N:</label>
+						  <input type="number" min="2" step="2" value="40" class="form-control" id="N">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+						  <label for="W">Walks:</label>
+						  <input type="number" min="1" step="1" value="1000" class="form-control" id="W">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+						  <label for="p">p:</label>
+						  <input type="number" min="0.0" step="0.05" max="1" value="0.5" class="form-control" id="p">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+						  <label for="r">r:</label>
+						  <input type="number" step="1" value="10" class="form-control" id="r">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+						  <label for="k">k:</label>
+						  <input type="number" step="2" value="20" class="form-control" id="k">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+						  <label for="usr">X:</label>
+						  <input type="number" min="0.0" step="0.05" max="1" value="0.5" class="form-control" id="X">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6" id="arguments" style="text-align:left;">
+					<label class="radio-inline"><input type="radio" name="arg" value="1" checked>Probabilità che la passeggiata aleatoria simmetrica al tempo N valga r.</label><br/>
+					<label class="radio-inline"><input type="radio" name="arg" value="2" checked>Probabilità che la passeggiata aleatoria asimmetrica dato un certo p al tempo N valga r.</label><br/>
+					<label class="radio-inline"><input type="radio" name="arg" value="3">Probabilità che la passeggiata aleatoria simmetrica al tempo N valga 0 rimanendo sempre strettamente positiva.</label><br/>
+					<label class="radio-inline"><input type="radio" name="arg" value="4">Probabilità che la passeggiata aleatoria simmetrica al tempo N valga 0 rimanendo sempre >= a 0.</label><br/>
+					<label class="radio-inline"><input type="radio" name="arg" value="5">Probabilità che la passeggiata aleatoria simmetrica tocchi lo zero al tempo k.</label><br/>
+					<label class="radio-inline"><input type="radio" name="arg" value="6">Probabilità che la passeggiata aleatoria simmetrica sia positiva dal tempo k fino alla fine.</label><br/>
+					<label class="radio-inline"><input type="radio" name="arg" value="7">Probabilità che la proporzione di tempo passata in territorio positivo sia inferiore a x (legge arcoseno).</label><br/>
+				</div>
+	    </div>
+			<div class="col-md-12" style="padding-bottom: 20px; text-align:center;" id="results"></div>
+			<div class="col-md-12" style="height: 410px; max-width: 100%; margin: 0px auto;">
+				<div id="randomWalk"></div>
+	    </div>
+	  </div>
+	</body>
+</html>

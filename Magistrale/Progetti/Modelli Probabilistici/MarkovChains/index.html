@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+    <title>Markov Chains</title>
+    <style type="text/css">
+        #mynetwork {
+          width: 65%;
+          height: 600px;
+          float: left;
+          display: inline;
+          margin-left: 20px;
+        }
+        #data {
+          width: 30%;
+          float: left;
+          display: inline;
+          border: 1px solid #afafaf;
+          border-radius: 8px;
+          padding: 10px;
+          color: rgb(175, 175, 175);
+          text-align: center;
+        }
+        #info {
+          position: fixed;
+          top: 0;
+          left: 0;
+          margin-top: 60px;
+          margin-left: 10px;
+        }
+        #refresh {
+          position: fixed;
+          top: 0;
+          left: 0;
+          margin-top: 10px;
+          margin-left: 10px;
+        }
+        textarea {
+          color: #262626;
+          border-radius: 10px;
+        }
+        body {
+          background-color: #262626;
+          font-family: Arial, sans-serif;
+        }
+        h4 {
+          margin: 0;
+        }
+    </style>
+
+  </head>
+  <body>
+    <a class="btn btn-danger" href="../" style="z-index:999; position:fixed; right:0; top: 0; margin:10px 10px;">HOME</a>
+    <h1 style="color: rgb(175, 175, 175); text-align:center;">Catene di Markov</h1>
+
+    <div id="data">
+      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#infoModal" id="info">Info</button>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#infoModal" id="refresh" onclick="window.location.reload()">Update</button>
+      <h2> Dati </h2>
+      <textarea rows='5' cols='20' contenteditable='true' placeholder='[0.25, 0.75, 0, 0, 0], [0.5, 0.5, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0.33, 0.66, 0], [1, 0, 0, 0, 0]'></textarea>
+      <h2> Risultati </h2>
+      <div class="results"> </div>
+    </div>
+    <div id="mynetwork"></div>
+
+    <div class="modal fade" id="infoModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Ricordiamo che...</h4>
+          </div>
+          <div class="modal-body" style="text-align:center;">
+            <h4>Proprietà di Markov</h4>
+            <img src="https://latex.codecogs.com/gif.latex?P(X_{n&plus;1}&space;=&space;s'&space;|&space;X_0&space;=&space;s_0,&space;...,&space;X_{n-1}=s_{n-1},&space;X_n&space;=&space;s_n)&space;=&space;p_{s,&space;s'}" title="P(X_{n+1} = s' | X_0 = s_0, ..., X_{n-1}=s_{n-1}, X_n = s_n) = p_{s, s'}" />
+            <br/><br/><p style="text-align:left;">La probabilit&agrave; che al tempo n+1 la catena sia nello stato s' dipende solo dallo stato precedente.</p>
+
+            <h4>Periodo di uno stato</h4>
+            <img src="https://latex.codecogs.com/gif.latex?Periodo\;di\;s=MCD(A_s^&plus;)\;con\;A_s^&plus;=\left\{n>0\;|\;p_{s,s}^{(n)}>0\right\}" title="Periodo\;di\;s=MCD(A_s^+)\;con\;A_s^+=\left\{n>0\;|\;p_{s,s}^{(n)}>0\right\}" />
+            <br/><br/><p style="text-align:left;">Il massimo comune divisore della lunghezza di tutti i percorsi che partono da uno stato s e tornano ad s.</p>
+
+            <h4>Calcolo periodo</h4>
+            <img src="https://latex.codecogs.com/gif.latex?Sia\;A=(a_{s,s'})\;in\;cui:&space;\left\{\begin{matrix}&space;a_{s,s'}&space;=&space;1\;se\;p_{s,s'}>0\\&space;a_{s,s'}&space;=&space;0\;se\;p_{s,s'}=0&space;\end{matrix}\right." title="Sia\;A=(a_{s,s'})\;in\;cui: \left\{\begin{matrix} a_{s,s'} = 1\;se\;p_{s,s'}>0\\ a_{s,s'} = 0\;se\;p_{s,s'}=0 \end{matrix}\right." />
+            <img src="https://latex.codecogs.com/gif.latex?C=I&plus;A&plus;A^2&plus;...&plus;A^{|s|}\;in\;cui\;C_{s,s'}=1\Leftrightarrow&space;s&space;\leq&space;s'" title="C=I+A+A^2+...+A^{|s|}\;in\;cui\;C_{s,s'}=1\Leftrightarrow s \leq s'" />
+            <br/><br/><p style="text-align:left;">Il periodo della classe di equivalenza C è il MCD delle lunghezze di tutti i circuiti autoevitanti.</p>
+
+            <h4>Stati ricorrenti e transienti</h4>
+            <img src="https://latex.codecogs.com/gif.latex?Sia\;f_{s,s}=\sum_{n=1}^\infty&space;f_{s,s}^{(n)}\;la\;prob.\;di\;tornare\;ad\;s\;in\;n\;passi\;per\;la\;prima\;volta." title="Sia\;f_{s,s}=\sum_{n=1}^\infty f_{s,s}^{(n)}\;la\;probabilita\;di\;tornare\;ad\;s\;partendo\;da\;s\;in\;n\;passi\;per\;la\;prima\;volta." />
+            <br/><br/><p style="text-align:left;">Lo stato è <strong>ricorrente</strong> se: <img src="https://latex.codecogs.com/gif.latex?f_{s,s}=1" title="f_{s,s}=1" /></p>
+            <p style="text-align:left;">Lo stato è <strong>transiente</strong> se: <img src="https://latex.codecogs.com/gif.latex?f_{s,s}<1" title="f_{s,s}=1" /></p>
+            <p style="text-align:left;">Inoltre, se uno stato è transiente o ricorrente, tutti gli altri stati della stessa classe saranno o transienti o ricorrenti.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Chiudi</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  </body>
+</html>

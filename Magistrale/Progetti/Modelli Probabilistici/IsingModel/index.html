@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+
+		<title>Ising Model</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="scripts.js"></script>
+		<style>
+			body {
+				background-color: #262626;
+				color: rgb(175, 175, 175);
+			}
+			#infoModal {
+				color: black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<a class="btn btn-danger" href="../" style="z-index:999; position:fixed; right:0; margin:10px 10px;">HOME</a>
+		<div id="infoModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Funzionamento</h4>
+					</div>
+					<div class="modal-body">
+						<p>Per intuire (a priori, senza dati) quali immagini più probabilmente appariranno si utilizza la seguente probabilità. </p>
+						<p>Si considerano ricostruzioni in cui i pixel 1 e 0 si separano in insiemi più probabili.
+							Si utilizza il Markov random field, ovvero un insieme di variabili random che possiedono la proprietà di Markov:</p>
+						<img src="https://latex.codecogs.com/gif.latex?\pi_s&space;=&space;\frac{\epsilon^{\beta&space;J&space;\&hash;s}}{Z}" title="\pi_s = \frac{\epsilon^{\beta J \#s}}{Z}" />
+						<h4>Algoritmo Metropolis-Hastings Markov Chain Monte Carlo</h4>
+						<ol>
+							<li>
+								<p>Con s indico lo stato corrente della catena di Markov</p>
+								<p>Scelgo un pixel in modo casuale con coordinate x,y</p>
+								<p>Inverto il colore del pixel e produco uno stato candidato s'</p>
+								<p>Lo stato s' avrà quindi la seguente forma:</p>
+								<img src="https://latex.codecogs.com/gif.latex?s'_{ij}&space;=&space;\left\{\begin{matrix}&space;-s_{xy}&se\;i=x\;e\;j=y\\&space;s_{ij}&altrimenti&space;\end{matrix}\right." title="s'_{ij} = \left\{\begin{matrix} -s_{x,y}&se\;i=x\;e\;j=y\\ s_{i,j}&altrimenti \end{matrix}\right." />
+							</li>
+							<li>
+								<p>Calcolo alpha, ovvero la probabilità di accettazione della transizione</p>
+								<img src="https://latex.codecogs.com/gif.latex?\alpha_{s,s'}&space;=&space;min\begin{Bmatrix}&space;1,\frac{\pi_{s'}q_{s',s}}{\pi_{s}q_{s,s'}}&space;\end{Bmatrix}" title="\alpha_{s,s'} = min\begin{Bmatrix} 1,\frac{\pi_{s'}q_{s',s}}{\pi_{s}q_{s,s'}} \end{Bmatrix}" />
+								<p>Dopo vari passaggi di riduzione otteniamo che</p>
+								<img src="https://latex.codecogs.com/gif.latex?\frac{q_{s',s}}{q_{s,s'}}&space;=&space;1" title="\frac{q_{s',s}}{q_{s,s'}} = 1" /><br/>
+								<img src="https://latex.codecogs.com/gif.latex?\frac{\pi_{s'}}{\pi_{s}}&space;=&space;\frac{\mathbb{P}(d|s')}{\mathbb{P}(d|s)}\cdot\frac{\mathbb{P}(s')}{\mathbb{P}(s)}&space;=&space;e^{\frac{d_{xy}(s'_{xy}-s_{xy})}{\sigma^2}}\cdot&space;e^{2J(\&hash;s-\&hash;s')}" title="\frac{\pi_{s'}}{\pi_{s}} = \frac{\mathbb{P}(d|s')}{\mathbb{P}(d|s)}\cdot\frac{\mathbb{P}(s')}{\mathbb{P}(s)} = e^{\frac{d_{xy}(s'_{xy}-s_{xy})}{\sigma^2}}\cdot e^{2J(\#s-\#s')}" />
+							</li>
+							<li>
+								<p>Viene accettato lo stato s' con probabilità <img src="https://latex.codecogs.com/gif.latex?\alpha_{s,s'}" title="\alpha_{s,s'}" /></p>
+								<p>In caso sia accettato si passa allo stato s', altrimenti si rimane ad s.</p>
+							</li>
+						</ol>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container" style="text-align:center;">
+			<div class="row">
+				<div style="position:fixed; left:0; top:0; margin: 20px;">
+					<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#infoModal">Info</button><br/><br/>
+					<label for="sat">Saturation</label><br/><input type="checkbox" id="sat"/><br/><br/>
+					<label for="sel1">Image</label>
+				  <select class="form-control" id="type">
+				    <option>1</option>
+				    <option>2</option>
+				    <option>3</option>
+				    <option>4</option>
+				  </select>
+				</div>
+
+				<h1>Modello di Ising</h1>
+				<h3>Ricostruzione immagine</h3>
+				<div class="col-md-12"><br/><br/>
+					<div class="col-md-6" style="text-align:center;">
+						<h4><strong>Immagine originale</strong></h4>
+						<div id="container1"></div>
+					</div>
+					<div class="col-md-6" style="text-align:center;">
+						<h4><strong>Immagine disturbata in analisi</strong></h4>
+						<div id="container2"></div>
+					</div>
+				</div>
+				<div class="col-md-12"><br/><br/><br/><br/>
+					<div class="col-md-6" style="text-align:center;">
+						<h4><strong>Iterazioni (ogni 4096)</strong></h4>
+						<div id="container3"></div>
+					</div>
+					<div class="col-md-6" style="text-align:center;">
+						<h4><strong>Media iterazioni</strong></h4>
+						<div id="container4"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
