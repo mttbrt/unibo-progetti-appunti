@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="OpenGLWorkbench" targetName="es2" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b94a061-c0d6-49a6-ab40-7ccb6eef8f0b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/es2.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/es2.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/OpenGLWorkbench.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/OpenGLWorkbench.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/es1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/es2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/es2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/lab01" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/es2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Es7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Es7/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3494">
+              <caret line="630" column="22" selection-start-line="630" selection-start-column="22" selection-end-line="630" selection-end-column="22" />
+              <folding>
+                <element signature="e#225#254#0" />
+                <element signature="e#274#299#0" />
+                <element signature="e#315#341#0" />
+                <element signature="e#356#439#0" />
+                <element signature="e#2888#3034#0" />
+                <element signature="e#3036#3132#0" />
+                <element signature="e#3134#3308#0" />
+                <element signature="e#3310#3952#0" />
+                <element signature="e#3954#4634#0" />
+                <element signature="e#4636#11812#0" />
+                <element signature="e#11814#12876#0" />
+                <element signature="e#12878#13961#0" />
+                <element signature="e#13963#14708#0" />
+                <element signature="e#14710#15461#0" />
+                <element signature="e#15463#16576#0" />
+                <element signature="e#16578#17696#0" />
+                <element signature="e#17698#19055#0" />
+                <element signature="e#19057#19511#0" />
+                <element signature="e#19513#19803#0" />
+                <element signature="e#19805#23350#0" />
+                <element signature="e#23352#25585#0" />
+                <element signature="e#25587#26116#0" />
+                <element signature="e#26118#26605#0" />
+                <element signature="e#26607#26993#0" />
+                <element signature="e#26995#27369#0" />
+                <element signature="e#27747#28154#0" />
+                <element signature="e#28156#28563#0" />
+                <element signature="e#28565#28735#0" />
+                <element signature="e#28737#29440#0" />
+                <element signature="e#29442#31032#0" />
+                <element signature="e#41274#41489#0" />
+                <element signature="e#41491#41659#0" />
+                <element signature="e#41661#42096#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>xCloud2</find>
+      <find>buildScene</find>
+      <find>NumeroColpiti</find>
+      <find>colpito</find>
+      <find>frame</find>
+      <find>xLBranch1</find>
+      <find>lBranchDisplayed</find>
+      <find>rBranchDisplayed</find>
+      <find>cloudsSpeed</find>
+      <find>jumpVelocityX</find>
+      <find>jumpGravity</find>
+      <find>jumpTime</find>
+      <find>yLBranch2</find>
+      <find>drawFly</find>
+      <find>yLFly1</find>
+      <find>bestSc</find>
+      <find>flies</find>
+      <find>glEnable(GL_BLEND)</find>
+      <find>glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA)</find>
+      <find>glBegin(GL_POINTS)</find>
+      <find>updateNemici</find>
+      <find>drawScene</find>
+      <find>updateN</find>
+      <find>objectsSpeed</find>
+      <find>parti</find>
+      <find>particles</find>
+      <find>glutTimerFunc</find>
+      <find>value</find>
+      <find>updateSpider</find>
+      <find>buildAABB</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/lab_01_students.cpp" />
+        <option value="$PROJECT_DIR$/es1.cpp" />
+        <option value="$PROJECT_DIR$/es2.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="20" />
+    <option name="y" value="27" />
+    <option name="width" value="1346" />
+    <option name="height" value="701" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="OpenGLWorkbench" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Es2" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Es3" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="es2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLWorkbench" TARGET_NAME="es2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OpenGLWorkbench" RUN_TARGET_NAME="es2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b94a061-c0d6-49a6-ab40-7ccb6eef8f0b" name="Default Changelist" comment="" />
+      <created>1552918060299</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1552918060299</updated>
+      <workItem from="1552918061389" duration="5113000" />
+      <workItem from="1552929322054" duration="1093000" />
+      <workItem from="1553076555276" duration="115000" />
+      <workItem from="1553077566082" duration="132000" />
+      <workItem from="1553155900085" duration="6697000" />
+      <workItem from="1553177425115" duration="1024000" />
+      <workItem from="1553188086700" duration="1485000" />
+      <workItem from="1553253523954" duration="7818000" />
+      <workItem from="1553270615115" duration="107000" />
+      <workItem from="1553278130106" duration="12244000" />
+      <workItem from="1553365392408" duration="269000" />
+      <workItem from="1553422630508" duration="9975000" />
+      <workItem from="1553438819717" duration="2237000" />
+      <workItem from="1553446124524" duration="5137000" />
+      <workItem from="1553500994479" duration="5747000" />
+      <workItem from="1553509983152" duration="661000" />
+      <workItem from="1553523895752" duration="10508000" />
+      <workItem from="1553592288437" duration="52000" />
+      <workItem from="1553598426922" duration="853000" />
+      <workItem from="1553623371713" duration="4273000" />
+      <workItem from="1553681476684" duration="26000" />
+      <workItem from="1553695578471" duration="272000" />
+      <workItem from="1553701456617" duration="6528000" />
+      <workItem from="1553850493159" duration="340000" />
+      <workItem from="1553884045086" duration="2118000" />
+      <workItem from="1554102247746" duration="7235000" />
+      <workItem from="1554112881334" duration="889000" />
+      <workItem from="1554125690058" duration="14619000" />
+      <workItem from="1554208747206" duration="598000" />
+      <workItem from="1554216464291" duration="6349000" />
+      <workItem from="1554225399264" duration="3434000" />
+      <workItem from="1554278630079" duration="458000" />
+      <workItem from="1554305806828" duration="3507000" />
+      <workItem from="1554311592950" duration="3147000" />
+      <workItem from="1554372247245" duration="140000" />
+      <workItem from="1554400584534" duration="1148000" />
+      <workItem from="1554458194703" duration="582000" />
+      <workItem from="1554475525746" duration="165000" />
+      <workItem from="1554706191579" duration="2435000" />
+      <workItem from="1561475014352" duration="5503000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="135033000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1600" height="873" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14561856" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329235" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5163934" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39833334" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32833335" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32240438" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3294702" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.3294702" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lab_00_students.cpp" />
+    <entry file="file://$PROJECT_DIR$/lab_01_students.cpp" />
+    <entry file="file://$PROJECT_DIR$/lab_02_JumpingBall_students.cpp" />
+    <entry file="file://$PROJECT_DIR$/es1.cpp" />
+    <entry file="file://$PROJECT_DIR$/es2b.cpp" />
+    <entry file="file://$USER_HOME$/CLionProjects/Esercitazioni Grafica/Lab_02c_students/lab_02_ParticleSystem_students.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="21" />
+          <folding>
+            <element signature="e#23#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../Lab_02a_students/lab_02_GiocoVBO_students.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="147" column="12" selection-start-line="147" selection-start-column="12" selection-end-line="147" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3494">
+          <caret line="630" column="22" selection-start-line="630" selection-start-column="22" selection-end-line="630" selection-end-column="22" />
+          <folding>
+            <element signature="e#225#254#0" />
+            <element signature="e#274#299#0" />
+            <element signature="e#315#341#0" />
+            <element signature="e#356#439#0" />
+            <element signature="e#2888#3034#0" />
+            <element signature="e#3036#3132#0" />
+            <element signature="e#3134#3308#0" />
+            <element signature="e#3310#3952#0" />
+            <element signature="e#3954#4634#0" />
+            <element signature="e#4636#11812#0" />
+            <element signature="e#11814#12876#0" />
+            <element signature="e#12878#13961#0" />
+            <element signature="e#13963#14708#0" />
+            <element signature="e#14710#15461#0" />
+            <element signature="e#15463#16576#0" />
+            <element signature="e#16578#17696#0" />
+            <element signature="e#17698#19055#0" />
+            <element signature="e#19057#19511#0" />
+            <element signature="e#19513#19803#0" />
+            <element signature="e#19805#23350#0" />
+            <element signature="e#23352#25585#0" />
+            <element signature="e#25587#26116#0" />
+            <element signature="e#26118#26605#0" />
+            <element signature="e#26607#26993#0" />
+            <element signature="e#26995#27369#0" />
+            <element signature="e#27747#28154#0" />
+            <element signature="e#28156#28563#0" />
+            <element signature="e#28565#28735#0" />
+            <element signature="e#28737#29440#0" />
+            <element signature="e#29442#31032#0" />
+            <element signature="e#41274#41489#0" />
+            <element signature="e#41491#41659#0" />
+            <element signature="e#41661#42096#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

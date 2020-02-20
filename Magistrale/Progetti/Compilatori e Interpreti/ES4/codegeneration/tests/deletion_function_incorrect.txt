@@ -1,0 +1,18 @@
+{
+	annihilate(var int x, var int y, var int z) {
+		delete x;
+		delete y;
+		delete z;
+	}
+	
+	int a = 1;
+	int b = 2;
+	int c = 3;
+	
+	annihilate(a, b, c);
+	annihilate(a, b, c);
+	
+	bool a = true;
+	bool b = false;
+	int c = -1;
+}

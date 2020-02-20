@@ -1,0 +1,83 @@
+push $fp
+move $fp $sp
+push $ra
+li $a0 1
+push $a0
+b LABEL_1
+LABEL_0:
+move $fp $sp
+push $ra
+lw $a0 2($fp)
+push $a0
+li $a0 0
+top $t1
+pop
+beq $t1 $a0 LABEL_4
+li $a0 0
+b LABEL_5
+LABEL_4:
+li $a0 1
+LABEL_5:
+li $t1 0
+beq $t1 $a0 LABEL_2
+push $fp
+move $fp $sp
+push $ra
+lw $al 0($fp)
+lw $a0 1($al)
+lw $a0 0($a0)
+print $a0 
+addi $sp $sp 1
+top $fp
+pop
+b LABEL_3
+LABEL_2:
+push $fp
+move $fp $sp
+push $ra
+lw $al 0($fp)
+lw $a0 1($al)
+lw $a0 0($a0)
+push $a0
+lw $al 0($fp)
+lw $a0 2($al)
+top $t1
+pop
+mult $a0 $t1 $a0
+push $a0
+push $fp
+lw $al 0($fp)
+lw $a0 2($al)
+push $a0
+li $a0 1
+top $t1
+pop
+sub $a0 $t1 $a0
+push $a0
+addi $a0 $fp -2
+push $a0
+lw $al 0($fp)
+lw $al 0($al)
+push $al
+jal LABEL_0
+addi $sp $sp 2
+top $fp
+pop
+LABEL_3:
+top $ra
+addi $sp $sp 4
+top $fp
+pop
+jr $ra
+LABEL_1:
+push $fp
+li $a0 6
+push $a0
+addi $a0 $fp -2
+push $a0
+lw $al 0($fp)
+push $al
+jal LABEL_0
+addi $sp $sp 2
+top $fp
+pop

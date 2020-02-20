@@ -1,0 +1,15 @@
+{
+	oddlySpecificPrint(int a, bool b, var int c, var bool d) {
+		print a;
+		print b;
+		print c;
+		print d;
+	}
+	
+	int x = 0;
+	bool y = false;
+	
+	oddlySpecificPrint(42, true, x, y);
+	oddlySpecificPrint(42);
+	oddlySpecificPrint(x, y, 42, false);
+}

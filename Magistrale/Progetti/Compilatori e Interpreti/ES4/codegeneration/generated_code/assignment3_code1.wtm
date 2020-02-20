@@ -1,0 +1,10 @@
+push $fp
+move $fp $sp
+push $ra
+li $a0 4
+push $a0
+li $a0 5
+push $a0
+addi $sp $sp 3
+top $fp
+pop

@@ -1,0 +1,22 @@
+{
+	printGreatest(int x, int y) {
+		if(x > y) then {
+			print x;
+		} else {
+			print y;
+		}
+	}
+	
+	swap(var int x, var int y) {
+		int tmp = x;
+		x = y;
+		y = tmp;
+	}
+	
+	int a = 2;
+	int b = 5;
+	
+	printGreatest(a, b);
+	swap(a, b);
+	printGreatest(a, b);
+}

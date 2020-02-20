@@ -1,0 +1,3 @@
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es2/cmake-build-debug/CMakeFiles/es2.dir
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es2/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -1,0 +1,12 @@
+{
+	deleteAfterNSteps(int n, var int x) {
+		if(n==0) then {
+			delete x;
+		} else {
+			deleteAfterNSteps(n-1, x);
+		}
+	}
+	
+	int a = 10;
+	deleteAfterNSteps(5, a);
+}

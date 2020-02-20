@@ -1,0 +1,4 @@
+/home/methk/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es1
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es1/cmake-build-debug

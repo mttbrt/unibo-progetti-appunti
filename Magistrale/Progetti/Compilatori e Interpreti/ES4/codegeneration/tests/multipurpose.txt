@@ -1,0 +1,11 @@
+{
+  f(var int x){
+    g(var int y){
+      y=3;
+    }
+    g(x);
+  } 
+  int a = 1;
+  f(a);
+  print a;
+}

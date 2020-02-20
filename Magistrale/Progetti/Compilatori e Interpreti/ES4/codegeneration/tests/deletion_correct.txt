@@ -1,0 +1,8 @@
+{
+	int x = 15;
+	int y = 16;
+	
+	delete x;
+	int x = 16;
+	print x == y;
+}

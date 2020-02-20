@@ -1,0 +1,10 @@
+{
+	deleteNTimes(int n, var int x) {
+		if(n==1) then {
+			delete x;
+		} else {
+			delete x;
+			deleteNTimes(n-1, x);
+		}
+	}
+}

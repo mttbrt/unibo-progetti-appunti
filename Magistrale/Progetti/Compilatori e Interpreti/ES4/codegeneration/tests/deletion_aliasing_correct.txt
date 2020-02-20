@@ -1,0 +1,11 @@
+{
+	swap(var int a, var int b) {
+		int tmp = a;
+		a = b;
+		b = tmp;
+	}
+	
+	int x = 9;
+	
+	swap(x, x);
+}

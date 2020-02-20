@@ -1,0 +1,8 @@
+{
+	int x = 6;
+	delete x;
+	int x = 7;
+	
+	int y = 8;
+	int y = 9;
+}

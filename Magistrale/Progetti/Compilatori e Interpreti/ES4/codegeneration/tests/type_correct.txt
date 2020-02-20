@@ -1,0 +1,12 @@
+{
+	int x = 1;
+	x = x+1;
+	
+	bool y = true;
+	
+	if(y) then {
+		x = 31*x+1;
+	} else {}
+	
+	print x;
+}

@@ -34,8 +34,20 @@ CdLM [Informatica - Tecniche del Software](https://corsi.unibo.it/magistrale/inf
 Anno Immatricolazione [2018/2019](https://corsi.unibo.it/magistrale/informatica/insegnamenti/piano?code=8028&year=2018&manifest=Manifesto-2018_8028_000_A58_2018)
 
 ### - Progetti
+* Compilatori e Interpreti
+* Crittografia
+* Grafica
+* Modelli Probabilistici
+* Usability and User Experience
 
 ### - Appunti
+* Algoritmi Paralleli
+* Compilatori e Interpreti
+* Complementi Basi di Dati
+* Crittografia
+* Grafica
+* Intelligenza Artificiale
+* Modelli Probabilistici
 
 ### - Tesi
 

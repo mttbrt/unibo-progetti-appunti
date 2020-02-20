@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es3/main.cpp
+stdio.h
+-
+unistd.h
+-
+math.h
+-
+vector
+-
+string
+-
+unordered_map
+-
+GL/glew.h
+-
+GL/freeglut.h
+-
+glm/glm.hpp
+-
+glm/gtc/matrix_transform.hpp
+-
+glm/gtc/type_ptr.hpp
+-
+

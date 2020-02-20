@@ -1,0 +1,9 @@
+{
+	f(var int x, int y) {
+		if (y == 0) then {
+	 		delete x;
+ 		} else {
+ 			x = x + y;
+		}
+	}
+}

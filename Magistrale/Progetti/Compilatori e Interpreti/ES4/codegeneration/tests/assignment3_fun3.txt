@@ -1,0 +1,10 @@
+{
+	f(var int x, var int y) {
+		int z = x;
+		delete x; 
+		y = y + z;
+	}
+
+    int x = 3; 
+    f(x, x);
+}

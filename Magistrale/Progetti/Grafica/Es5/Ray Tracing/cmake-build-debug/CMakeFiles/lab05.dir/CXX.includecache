@@ -1,0 +1,180 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/argparser.h
+string.h
+-
+stdio.h
+-
+assert.h
+-
+stdlib.h
+-
+vectors.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/vectors.h
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/bag.h
+stdlib.h
+-
+assert.h
+-
+utils.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/utils.h
+math.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/math.h
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/boundingbox.h
+assert.h
+-
+vectors.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/vectors.h
+utils.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/utils.h
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/edge.h
+limits.h
+-
+stdio.h
+-
+assert.h
+-
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/face.h
+edge.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/edge.h
+vertex.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/vertex.h
+ray.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/ray.h
+hit.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/hit.h
+argparser.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/argparser.h
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/freeglut_std.h
+windows.h
+-
+EGL/egl.h
+-
+GLES/gl.h
+-
+GLES2/gl2.h
+-
+OpenGL/gl.h
+-
+OpenGL/glu.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
+stdlib.h
+-
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/glut.h
+freeglut_std.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/freeglut_std.h
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/hit.h
+vectors.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/vectors.h
+ray.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/ray.h
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/material.h
+assert.h
+-
+vectors.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/vectors.h
+ray.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/ray.h
+hit.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/hit.h
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/mesh.h
+vector
+-
+vectors.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/vectors.h
+bag.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/bag.h
+boundingbox.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/boundingbox.h
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/ray.h
+iostream
+-
+vectors.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/vectors.h
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/raytracer.cpp
+raytracer.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/raytracer.h
+material.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/material.h
+vectors.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/vectors.h
+argparser.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/argparser.h
+raytree.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/raytree.h
+utils.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/utils.h
+mesh.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/mesh.h
+face.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/face.h
+sphere.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/sphere.h
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/raytracer.h
+assert.h
+-
+ray.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/ray.h
+hit.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/hit.h
+vector
+-
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/raytree.h
+ray.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/ray.h
+glut.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/glut.h
+GL/glut.h
+-
+vector
+-
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/sphere.h
+vectors.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/vectors.h
+material.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/material.h
+vector
+-
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/utils.h
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/vectors.h
+iostream
+-
+stdio.h
+-
+math.h
+-
+assert.h
+-
+
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/vertex.h
+assert.h
+-
+vectors.h
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/vectors.h
+

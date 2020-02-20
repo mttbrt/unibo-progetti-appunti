@@ -1,0 +1,1 @@
+.\Project5.exe  -size 200 200 -input ..\cornell_box_reflective_spheres.obj -background_color 0.2 0.1 0.6 -num_bounces 3

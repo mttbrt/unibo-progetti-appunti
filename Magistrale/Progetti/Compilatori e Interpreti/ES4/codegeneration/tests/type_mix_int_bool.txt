@@ -1,0 +1,4 @@
+{
+	bool y = false;
+	int x = 1 - y;
+}

@@ -1,0 +1,5 @@
+{
+	int x = 4;
+	delete x;
+	int x = 5;
+}

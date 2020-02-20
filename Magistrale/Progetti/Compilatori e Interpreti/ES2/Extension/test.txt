@@ -1,0 +1,6 @@
+{
+	int x; int h;
+	def g(var bool x) {}
+	def h() {}
+	def g(var bool y) {}
+}

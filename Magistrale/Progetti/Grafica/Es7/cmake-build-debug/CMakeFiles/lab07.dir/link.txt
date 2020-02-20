@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/lab07.dir/common.cpp.o CMakeFiles/lab07.dir/HUD_Logger.cpp.o CMakeFiles/lab07.dir/main.cpp.o  -o lab07 /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libGLU.so /usr/lib/x86_64-linux-gnu/libglut.so /usr/lib/x86_64-linux-gnu/libGLEW.so 

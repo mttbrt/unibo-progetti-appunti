@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="OpenGLWorkbench" targetName="lab07" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="53e23840-7c2c-4129-8f2a-30d853e8ec74" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Es3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Es3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Es5/Ray Tracing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Es5/Ray Tracing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Es6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Es6/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="104" column="99" selection-start-line="104" selection-start-column="99" selection-end-line="104" selection-end-column="99" />
+              <folding>
+                <element signature="e#626#925#0" />
+                <element signature="e#941#1017#0" />
+                <element signature="e#1041#1166#0" />
+                <element signature="e#1186#1354#0" />
+                <element signature="e#1377#1537#0" />
+                <element signature="e#1555#1838#0" />
+                <element signature="e#1868#2001#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="597" lean-forward="true" selection-start-line="597" selection-end-line="597" />
+              <folding>
+                <element signature="e#0#796#0" />
+                <element signature="e#923#1967#0" />
+                <element signature="e#1969#2525#0" />
+                <element signature="e#2527#3075#0" />
+                <element signature="e#3077#3749#0" />
+                <element signature="e#3751#4405#0" />
+                <element signature="e#4407#4908#0" />
+                <element signature="e#4910#5656#0" />
+                <element signature="e#5658#6087#0" />
+                <element signature="e#6089#6522#0" />
+                <element signature="e#6524#6913#0" />
+                <element signature="e#6915#17661#0" />
+                <element signature="e#17663#22474#0" />
+                <element signature="e#22476#24049#0" />
+                <element signature="e#24051#24162#0" />
+                <element signature="e#26515#27711#0" />
+                <element signature="e#27713#28439#0" />
+                <element signature="e#28441#28827#0" />
+                <element signature="e#28829#29445#0" />
+                <element signature="e#29447#29546#0" />
+                <element signature="e#29548#30702#0" />
+                <element signature="e#30704#31048#0" />
+                <element signature="e#31050#31439#0" />
+                <element signature="e#31441#31853#0" />
+                <element signature="e#31855#32372#0" />
+                <element signature="e#32374#34047#0" />
+                <element signature="e#34049#36872#0" />
+                <element signature="e#36874#41407#0" />
+                <element signature="e#41409#42960#0" />
+                <element signature="e#42962#44222#0" />
+                <element signature="e#44224#44954#0" />
+                <element signature="e#44956#46824#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>v_reflection</find>
+      <find>init_torus</find>
+      <find>camer</find>
+      <find>rock</find>
+      <find>GL_TEXT</find>
+      <find>NORMAL</find>
+      <find>BRICK</find>
+      <find>selectedObj</find>
+      <find>light.position</find>
+      <find>SKYBOX</find>
+      <find>background</find>
+      <find>REFLECTION</find>
+      <find>camera</find>
+      <find>window</find>
+      <find>Camera</find>
+      <find>glEnable(GL_B</find>
+      <find>ViewSetup</find>
+      <find>initTorus</find>
+      <find>keyboardListener</find>
+      <find>toru</find>
+      <find>skybo</find>
+      <find>reflection</find>
+      <find>base_unif</find>
+      <find>M_Matrix_pointer</find>
+      <find>camera_position_pointer</find>
+      <find>center</find>
+      <find>negz</find>
+      <find>modifyModelMatrix</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Shaders/f_passthrough.glsl" />
+        <option value="$PROJECT_DIR$/Shaders/f_texture.glsl" />
+        <option value="$PROJECT_DIR$/Shaders/v_passthrough.glsl" />
+        <option value="$PROJECT_DIR$/Shaders/v_texture.glsl" />
+        <option value="$PROJECT_DIR$/main2.cpp" />
+        <option value="$USER_HOME$/Downloads/Telegram Desktop/main_students (2).cpp" />
+        <option value="$PROJECT_DIR$/Shaders/v_normal_map.glsl" />
+        <option value="$PROJECT_DIR$/Shaders/f_normal_map.glsl" />
+        <option value="$PROJECT_DIR$/Shaders/f_skybox.glsl" />
+        <option value="$PROJECT_DIR$/Shaders/v_skybox.glsl" />
+        <option value="$PROJECT_DIR$/Shaders/v_reflection.glsl" />
+        <option value="$PROJECT_DIR$/Shaders/v_refraction.glsl" />
+        <option value="$PROJECT_DIR$/Shaders/f_refraction.glsl" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Shaders/f_reflection.glsl" />
+        <option value="$PROJECT_DIR$/main.h" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="27" />
+    <option name="width" value="1221" />
+    <option name="height" value="647" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="OpenGLWorkbench" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Es7" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Shaders" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="lab07" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLWorkbench" TARGET_NAME="lab07" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OpenGLWorkbench" RUN_TARGET_NAME="lab07">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53e23840-7c2c-4129-8f2a-30d853e8ec74" name="Default Changelist" comment="" />
+      <created>1559123095638</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559123095638</updated>
+      <workItem from="1559123097327" duration="327000" />
+      <workItem from="1559123430759" duration="18000" />
+      <workItem from="1559123478828" duration="1145000" />
+      <workItem from="1559310590270" duration="4281000" />
+      <workItem from="1561108340624" duration="15072000" />
+      <workItem from="1561195239970" duration="6097000" />
+      <workItem from="1561456592414" duration="17000" />
+      <workItem from="1561649222796" duration="7395000" />
+      <workItem from="1562321613750" duration="1263000" />
+      <workItem from="1562744154512" duration="1214000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="36829000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1600" height="873" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13981959" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33469945" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="CMake" order="11" weight="0.33112583" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.329235" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Shaders/f_passthrough.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/v_passthrough.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/v_texture.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/f_texture.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main2.cpp" />
+    <entry file="file://$USER_HOME$/Downloads/Telegram Desktop/main_students (2).cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="1032" lean-forward="true" selection-start-line="1032" selection-end-line="1032" />
+          <folding>
+            <element signature="e#0#796#0" />
+            <element signature="e#1450#1722#0" />
+            <element signature="e#1738#1799#0" />
+            <element signature="e#1823#1933#0" />
+            <element signature="e#1953#2100#0" />
+            <element signature="e#2123#2262#0" />
+            <element signature="e#2280#2536#0" />
+            <element signature="e#2566#2687#0" />
+            <element signature="e#2954#3279#1" />
+            <element signature="e#3995#4060#0" />
+            <element signature="e#4216#4287#1" />
+            <element signature="e#4300#4354#1" />
+            <element signature="e#4382#4473#0" />
+            <element signature="e#4487#4557#1" />
+            <element signature="e#4574#4593#1" />
+            <element signature="e#4608#4682#1" />
+            <element signature="e#7148#8026#0" />
+            <element signature="e#8028#8527#0" />
+            <element signature="e#8529#9021#0" />
+            <element signature="e#9023#9638#0" />
+            <element signature="e#9640#10236#0" />
+            <element signature="e#10238#10784#0" />
+            <element signature="e#10786#11407#0" />
+            <element signature="e#11409#11813#0" />
+            <element signature="e#11815#12216#0" />
+            <element signature="e#12218#12622#0" />
+            <element signature="e#12624#12987#0" />
+            <element signature="e#12989#23046#0" />
+            <element signature="e#23048#26520#0" />
+            <element signature="e#26522#28009#0" />
+            <element signature="e#28011#28118#0" />
+            <element signature="e#28120#29784#0" />
+            <element signature="e#29786#30891#0" />
+            <element signature="e#30893#32188#0" />
+            <element signature="e#32190#32503#0" />
+            <element signature="e#32505#32999#0" />
+            <element signature="e#33001#33100#0" />
+            <element signature="e#33102#34214#0" />
+            <element signature="e#34216#34536#0" />
+            <element signature="e#34538#34568#0" />
+            <element signature="e#34570#34596#0" />
+            <element signature="e#34598#34624#0" />
+            <element signature="e#34655#34679#0" />
+            <element signature="e#34681#34707#0" />
+            <element signature="e#34900#34984#0" />
+            <element signature="e#34900#35645#0" />
+            <element signature="e#35647#36259#0" />
+            <element signature="e#36261#38710#0" />
+            <element signature="e#38712#42545#0" />
+            <element signature="e#42547#43832#0" />
+            <element signature="e#43834#44943#0" />
+            <element signature="e#44945#45600#0" />
+            <element signature="e#45602#47188#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mesh/sharprockfree.obj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/v_skybox.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/v_normal_map.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="43" column="57" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/f_normal_map.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/f_skybox.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/v_refraction.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/f_refraction.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="50" lean-forward="true" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/v_reflection.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Shaders/f_reflection.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="104" column="99" selection-start-line="104" selection-start-column="99" selection-end-line="104" selection-end-column="99" />
+          <folding>
+            <element signature="e#626#925#0" />
+            <element signature="e#941#1017#0" />
+            <element signature="e#1041#1166#0" />
+            <element signature="e#1186#1354#0" />
+            <element signature="e#1377#1537#0" />
+            <element signature="e#1555#1838#0" />
+            <element signature="e#1868#2001#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="597" lean-forward="true" selection-start-line="597" selection-end-line="597" />
+          <folding>
+            <element signature="e#0#796#0" />
+            <element signature="e#923#1967#0" />
+            <element signature="e#1969#2525#0" />
+            <element signature="e#2527#3075#0" />
+            <element signature="e#3077#3749#0" />
+            <element signature="e#3751#4405#0" />
+            <element signature="e#4407#4908#0" />
+            <element signature="e#4910#5656#0" />
+            <element signature="e#5658#6087#0" />
+            <element signature="e#6089#6522#0" />
+            <element signature="e#6524#6913#0" />
+            <element signature="e#6915#17661#0" />
+            <element signature="e#17663#22474#0" />
+            <element signature="e#22476#24049#0" />
+            <element signature="e#24051#24162#0" />
+            <element signature="e#26515#27711#0" />
+            <element signature="e#27713#28439#0" />
+            <element signature="e#28441#28827#0" />
+            <element signature="e#28829#29445#0" />
+            <element signature="e#29447#29546#0" />
+            <element signature="e#29548#30702#0" />
+            <element signature="e#30704#31048#0" />
+            <element signature="e#31050#31439#0" />
+            <element signature="e#31441#31853#0" />
+            <element signature="e#31855#32372#0" />
+            <element signature="e#32374#34047#0" />
+            <element signature="e#34049#36872#0" />
+            <element signature="e#36874#41407#0" />
+            <element signature="e#41409#42960#0" />
+            <element signature="e#42962#44222#0" />
+            <element signature="e#44224#44954#0" />
+            <element signature="e#44956#46824#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

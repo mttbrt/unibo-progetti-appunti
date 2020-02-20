@@ -1,0 +1,15 @@
+{
+	int u = 1;
+
+	f(var int x, int n) {
+		if (n == 0) then {
+			print(x);
+		} else {
+			int y = x * n;
+			f(y, n - 1);
+		}
+		delete x;
+	}
+
+	f(u, 6);
+}

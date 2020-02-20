@@ -1,0 +1,3 @@
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/cmake-build-debug/CMakeFiles/lab05.dir
+/home/methk/Documents/UNIBOM1/Grafica/Esercitazioni/Finali/computer-graphics/Es5/Ray Tracing/cmake-build-debug/CMakeFiles/edit_cache.dir

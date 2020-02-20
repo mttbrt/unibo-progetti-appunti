@@ -1,0 +1,10 @@
+{
+	g(var int x, var int y) {
+	 	delete x; 
+	 	delete y;
+	} 
+	
+	f(var int z) {
+		g(z, z); 
+	}
+}

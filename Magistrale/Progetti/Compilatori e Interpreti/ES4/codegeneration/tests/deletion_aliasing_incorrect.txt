@@ -1,0 +1,10 @@
+{
+	deleteBoth(var int x, var int y) {
+		delete x;
+		delete y;
+	}
+	
+	int a = 19;
+	
+	deleteBoth(a, a);
+}
