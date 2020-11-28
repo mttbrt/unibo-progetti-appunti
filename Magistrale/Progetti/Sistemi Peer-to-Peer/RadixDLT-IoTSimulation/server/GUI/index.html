@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Radibus</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!-- #222831 #393e46 #d65a31 -->
+    <style>
+      body {
+        background: #222831;
+        color: #d65a31;
+      }
+
+      .table {
+        width: 80%;
+        max-width: 200px;
+      }
+
+      .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+        border-top: 1px solid #393e46;
+      }
+
+      .table > thead > tr > th {
+        border-bottom: 2px solid #393e46;
+      }
+
+      .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+        color: #d65a31;
+        background-color: #393e46;
+        border-color: #393e46;
+      }
+
+      .btn-default, .btn-default:hover, .btn-default:active, .btn-default:focus {
+        color: #393e46;
+        background-color: #d65a31;
+        border-color: #d65a31;
+      }
+
+      .left-table {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 20px;
+      }
+
+      #map {
+        width:100%;
+        height:200px;
+        position: absolute;
+        visibility: hidden;
+        z-index: 9999;
+        bottom: 0;
+        left: 0;
+      }
+    </style>
+    <script src="http://openlayers.org/api/OpenLayers.js"></script>
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <div id="bus-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" onclick="refresh(); $('#map').css('visibility', 'hidden');">&times;</button>
+            <h4 class="modal-title">Bus</h4>
+          </div>
+          <div class="modal-body">
+            <center>
+              <table class="table" id="buspos-table">
+                <thead>
+                  <tr>
+                    <th><h4><strong>Date</strong></h4></th>
+                    <th><h4><strong>Latitude</strong></h4></th>
+                    <th><h4><strong>Longitude</strong></h4></th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </center>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="refresh(); $('#map').css('visibility', 'hidden');">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="success-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" onclick="refresh()">&times;</button>
+            <h4 class="modal-title">Success</h4>
+          </div>
+          <div class="modal-body"> </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="refresh()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="error-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" onclick="refresh()">&times;</button>
+            <h4 class="modal-title">Error</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="refresh()">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="left-table">
+      <table class="table" id="balance-table">
+        <thead>
+          <tr>
+            <th><h4><strong>Tokens</strong></h4></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <center>
+      <h1>Radibus</h1>
+      <table class="table" id="bus-table">
+        <thead>
+          <tr>
+            <th scope="col">Line</th>
+            <th scope="col">Subscribe</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </center>
+
+    <script type="text/javascript">
+      var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+      var toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+      var map = new OpenLayers.Map("map");
+      var mapnik = new OpenLayers.Layer.OSM();
+      map.addLayer(mapnik);
+      var markers = new OpenLayers.Layer.Markers("Markers");
+      map.addLayer(markers);
+
+
+
+      function getBuses() {
+        $.get("/buses", function(data, status) {
+          if(data.success == 1) {
+            $('#bus-table tbody').html("")
+            for (var i = 0; i < data.data.length; i++) {
+              var busId = "B" + data.data[i].name.split(" ")[1]
+              jQuery.ajax({
+                url: "/bus?id=" + busId,
+                success: function(dataB) {
+                  var content = $('#bus-table tbody').html()
+                  if(dataB.success == 1) {
+                    content += '<tr> <td>' + busId + '</td> <td><button type="button" class="btn btn-default monitor" tokenUri="' + data.data[i].tokenUri + '">Monitor</button></td> </tr>'
+                  } else {
+                    content += '<tr> <td>' + busId + '</td> <td><button type="button" class="btn btn-primary subscribe" tokenUri="' + data.data[i].tokenUri + '">Subscribe</button></td> </tr>'
+                  }
+                  $('#bus-table tbody').html(content);
+                },
+                async:false
+              })
+            }
+          } else {
+            $('#error-modal .modal-body').html('<p>An error has occured while getting buses list: ' + data.data + '</p>');
+            $('#error-modal').modal('show');
+          }
+        })
+      }
+      getBuses()
+
+      function getBalance() {
+        $.get("/balance", function(data, status) {
+          if(data.success == 1) {
+            var content = ''
+            for (var key in data.data) {
+              content += '<tr> <td>' + key.split("/")[2] + '</td> <td>' + data.data[key] + '</td> </tr>'
+            }
+
+            $('#balance-table tbody').html(content);
+          } else {
+            $('#error-modal .modal-body').html('<p>An error has occured while getting client balance: ' + data.data + '</p>');
+            $('#error-modal').modal('show');
+          }
+        })
+      }
+      getBalance()
+
+      function refresh() {
+        getBalance()
+        getBuses()
+      }
+
+      $('body').on('click', '.subscribe', function() {
+          var tokenId = $(this).attr('tokenUri').split("/")[2]
+          $.get("/subscribe?id=" + tokenId, function(data, status) {
+            if(data.success == 1) {
+              $('#success-modal .modal-body').html('<p>Successfully subscribed to bus line.</p>');
+              $('#success-modal').modal('show');
+            } else {
+              $('#error-modal .modal-body').html('<p>An error has occured while subscribing for bus line: ' + data.data + '</p>');
+              $('#error-modal').modal('show');
+            }
+          })
+      });
+
+      $('body').on('click', '.monitor', function() {
+          var tokenId = $(this).attr('tokenUri').split("/")[2]
+          $.get("/position?id=" + tokenId.substring(1, tokenId.length), function(data, status) {
+            if(data.success == 1) {
+              markers.clearMarkers();
+
+              var busPos = data.data
+              var busLines = JSON.parse(window.localStorage.getItem('busLines'))
+
+              if(!busLines)
+                busLines = {}
+
+              if(!busLines[tokenId.substring(1, tokenId.length)])
+                busLines[tokenId.substring(1, tokenId.length)] = []
+
+              var flag = false
+              var singleLine = busLines[tokenId.substring(1, tokenId.length)]
+              for (var i = 0; i < singleLine.length; i++) {
+                if(JSON.stringify(singleLine[i]) === JSON.stringify(busPos))
+                  flag = true
+              }
+
+              if(!flag) {
+                busLines[tokenId.substring(1, tokenId.length)].push(busPos)
+                window.localStorage.setItem('busLines', JSON.stringify(busLines))
+              }
+
+              singleLine = busLines[tokenId.substring(1, tokenId.length)]
+              $('#bus-modal .modal-title').html('Bus line ' + tokenId.substring(1, tokenId.length));
+              var content = ''
+              var latlng = []
+              for (var i = 0; i < singleLine.length; i++) {
+                if(i == 0) {
+                  latlng[0] = singleLine[i].latitude
+                  latlng[1] = singleLine[i].longitude
+                }
+
+                markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(singleLine[i].longitude, singleLine[i].latitude).transform(fromProjection, toProjection)));
+                content += "<tr> <td>" + singleLine[i].timestampISO + "</td> <td>" + singleLine[i].latitude + "</td> <td>" + singleLine[i].longitude + "</td> </tr>"
+              }
+              $('#bus-modal .modal-body #buspos-table tbody').html(content)
+              map.setCenter(new OpenLayers.LonLat(latlng[1], latlng[0]).transform(fromProjection, toProjection), 13);
+
+              $('#map').css('visibility', 'visible');
+              $('#bus-modal').modal('show');
+            } else {
+              $('#error-modal .modal-body').html('<p>Bus line ' + tokenId.substring(1, tokenId.length) + ' has not recorded any position.</p>');
+              $('#error-modal').modal('show');
+            }
+          })
+      });
+    </script>
+
+  </body>
+</html>

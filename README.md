@@ -35,19 +35,27 @@ Anno Immatricolazione [2018/2019](https://corsi.unibo.it/magistrale/informatica/
 
 ### - Progetti
 * Compilatori e Interpreti
+* Complementi Basi di Dati
+* Complex Systems and Network Science
 * Crittografia
+* Emerging Programming Paradigms
 * Grafica
+* Laboratorio di Making
+* Machine Learning
 * Modelli Probabilistici
+* Scalable and Cloud Programming
+* Sistemi Peer-to-Peer
 * Usability and User Experience
 
 ### - Appunti
 * Algoritmi Paralleli
 * Compilatori e Interpreti
-* Complementi Basi di Dati
 * Crittografia
+* Emerging Programming Paradigms
 * Grafica
 * Intelligenza Artificiale
 * Modelli Probabilistici
+* Usability and User Experience
 
 ### - Tesi
-
+... coming soon ...

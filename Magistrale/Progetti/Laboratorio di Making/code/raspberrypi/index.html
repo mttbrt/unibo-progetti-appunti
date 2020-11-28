@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Metal Detection Map</title>
+</head>
+<body>
+  <center>
+    <h2>Metal Detection Map</h2>
+    
+    <img src="./img/map_0.png" id="img">
+    
+    <script>
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+      }
+
+      async function updateIMG() {
+        iter = 0;
+        var img = document.getElementById("img")
+        
+        while (true) {
+          var http = new XMLHttpRequest();
+          http.open('HEAD', "./img/map_" + iter + ".png", false);
+          http.send();
+          
+          if (http.status == 404)
+            iter--;
+          
+          img.src = "./img/map_" + iter + ".png";
+          iter++;
+          
+          await sleep(5500);
+        }
+      }
+      
+      updateIMG();
+    </script>
+  </center>
+</body>
+</html>

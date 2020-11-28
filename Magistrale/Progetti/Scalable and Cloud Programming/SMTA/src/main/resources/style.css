@@ -1,0 +1,66 @@
+.root {
+    -fx-background: #363333;
+    -fx-text-base-color: #fffdf5;
+    -tab-text-color: -fx-text-base-color;
+}
+
+.tab-label {
+    -fx-text-fill: -tab-text-color ;
+}
+
+.tab {
+    -fx-background-color: #4c4949;
+}
+
+.chart {
+    -fx-background-color: #363333;
+}
+
+.chart-content {
+    -fx-background-color: #363333;
+}
+
+.chart-title {
+    -fx-background-color: #363333;
+}
+
+.chart-legend {
+    -fx-background-color: #363333;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: #272121;
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: #272121;
+}
+
+.chart-series-line {
+    -fx-stroke-width: 2px;
+    -fx-effect: null;
+}
+
+.default-color0.chart-series-line { -fx-stroke: #bbeaa6; }
+.default-color1.chart-series-line { -fx-stroke: #e3c878; }
+.default-color2.chart-series-line { -fx-stroke: #edb193; }
+.default-color3.chart-series-line { -fx-stroke: #a1cdd1; }
+.default-color4.chart-series-line { -fx-stroke: #ac8daf; }
+.default-color5.chart-series-line { -fx-stroke: #dfdfdf; }
+.default-color6.chart-series-line { -fx-stroke: #d48698; }
+.default-color7.chart-series-line { -fx-stroke: #8c879b; }
+.default-color8.chart-series-line { -fx-stroke: #8e98d1; }
+
+.default-color0.chart-line-symbol { -fx-background-color: #bbeaa6; -fx-scale-x: 0.35; -fx-scale-y: 0.35; }
+.default-color1.chart-line-symbol { -fx-background-color: #e3c878 ; -fx-scale-x: 0.35; -fx-scale-y: 0.35; }
+.default-color2.chart-line-symbol { -fx-background-color: #edb193; -fx-scale-x: 0.35; -fx-scale-y: 0.35; }
+.default-color3.chart-line-symbol { -fx-background-color: #a1cdd1; -fx-scale-x: 0.35; -fx-scale-y: 0.35; }
+.default-color4.chart-line-symbol { -fx-background-color: #ac8daf; -fx-scale-x: 0.35; -fx-scale-y: 0.35; }
+.default-color5.chart-line-symbol { -fx-background-color: #dfdfdf; -fx-scale-x: 0.35; -fx-scale-y: 0.35; }
+.default-color6.chart-line-symbol { -fx-background-color: #d48698; -fx-scale-x: 0.35; -fx-scale-y: 0.35; }
+.default-color7.chart-line-symbol { -fx-background-color: #8c879b; -fx-scale-x: 0.35; -fx-scale-y: 0.35; }
+.default-color8.chart-line-symbol { -fx-background-color: #8e98d1; -fx-scale-x: 0.35; -fx-scale-y: 0.35; }

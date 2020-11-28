@@ -1,0 +1,4 @@
+f_score:[0.15, 0.15]
+sequence_cross_entropy:[41.32, 40.55]
+transition_cross_entropy:[19.78, 19.41]
+steady_state_cross_entropy,[41.33, 40.62]

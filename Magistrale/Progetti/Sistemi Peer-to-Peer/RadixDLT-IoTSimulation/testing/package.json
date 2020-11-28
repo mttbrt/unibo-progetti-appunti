@@ -1,0 +1,19 @@
+{
+  "name": "radixdlt-iotsimulation",
+  "version": "1.0.0",
+  "description": "Simulation of an IoT smart city bus network over Radix DLT.",
+  "main": "server.js",
+  "repository": "https://github.com/radixdlt/radixdlt-js-server-example.git",
+  "author": "methk",
+  "license": "MIT",
+  "dependencies": {
+    "csv-writer": "^1.5.0",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "n-readlines": "^1.0.0",
+    "radixdlt": "^1.0.9-alpha"
+  },
+  "scripts": {
+    "server": "node testing.js"
+  }
+}
