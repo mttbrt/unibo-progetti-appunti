@@ -1,4 +1,4 @@
-# Università
+# UNIBO - Informatica
 ## Triennale - Progetti, Appunti e Tesi <br />
 CdL [Informatica per il Management](https://corsi.unibo.it/laurea/InformaticaManagement) - [UNIBO](http://www.unibo.it/it)  <br/>
 Anno Immatricolazione [2015/2016](https://corsi.unibo.it/laurea/InformaticaManagement/insegnamenti?AnnoAccademico=2015)
